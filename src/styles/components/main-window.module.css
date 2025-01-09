@@ -1,0 +1,25 @@
+.mainWindow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 70px;
+  background-color: white;
+  box-shadow: var(--sd-realistic-shadow);
+  border-radius: 38px;
+
+  flex-direction: column;
+}
+
+.headerText {
+  font-family: var(--font-prata);
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.subheader {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 18px;
+}

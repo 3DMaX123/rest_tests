@@ -1,0 +1,9 @@
+:root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --bc-mainBack-circle-one-two: #8DDFF3;
+    --bc-mainBacl-circle-third: #F39D9D;
+    --bc-mainBack-circle-fourth: #F3F3CF;
+    --sd-realistic-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
+    --tc-grey: rgba(52, 52, 52, 0.62);
+}

@@ -1,0 +1,13 @@
+.mainWindow {
+  width: 693px;
+  height: 720px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+
+  gap: 30px;
+  column-gap: 50px;
+}
