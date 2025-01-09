@@ -11,3 +11,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+p {
+  font-family: var(--font-inter);
+  font-weight: 400;
+}

@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 90%;
+  height: 60%;
+
+  gap: 32px;
+
+  flex-direction: column;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+
+  gap: 40px;
+}
+
+.ingridientsDiv,
+.descriptionDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+
+  max-width: 80%;
+}
+
+.ingridientsHeader,
+.descriptionHeader {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.ingridients,
+.description {
+  text-align: center;
+}
+
+.fieldButton {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
