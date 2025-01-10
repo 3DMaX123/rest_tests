@@ -16,9 +16,9 @@ export const LCorrectAns = {
 export const LOpenQuestions = {
     "LOQNameToDescription": "/name-to-description",
     "LOQDishBydescription": "/dish-by-description",
-}
+};
 
 export const LDishByGuess = {
     "LDBGOrder": "/order-by-criteria",
     "LDBGAllergens": "/order-by-allergens",
-}
+};

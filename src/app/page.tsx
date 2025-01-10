@@ -3,11 +3,11 @@ import MainWindow from "@comp/MainWindow";
 import styles from "@s/pages/main-page.module.css";
 import Button from "@ui/Button";
 import {links} from "@c/links";
-import {JSONToArray} from "../utils/JsonToArray";
-import {randomNumber} from "../utils/generateRandom";
+import {jsonToArray} from "@ut/JsonToArray";
+import {randomNumber} from "@ut/generateRandom";
 
 export default function Home() {
-  const array = JSONToArray(links, "values");
+  const array = jsonToArray(links, "values");
   const randomArray = randomNumber(0, array.length - 1);
 
   return (

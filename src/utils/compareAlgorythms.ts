@@ -31,7 +31,5 @@ export const normalizeAndCompare = (str1: string, str2: string): boolean => {
   const distance = levenshteinDistance(s1, s2);
   const similarity = (maxLength - distance) / maxLength;
 
-  console.log(s1, s2, similarity);
-
   return similarity > 0.85; // 85% similarity threshold
 };

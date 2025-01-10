@@ -2,7 +2,7 @@
 
 import React, {FC} from "react";
 import {IInputFieldProps} from "@t/ui/input-field";
-import {cn} from "../utils/shadcn";
+import {cn} from "@ut/shadcn";
 import styles from "@s/ui/input-fields.module.css";
 
 const InputField: FC<IInputFieldProps> = ({

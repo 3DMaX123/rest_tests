@@ -1,7 +1,8 @@
-import {IClassName, SetStateAction} from "@t/root";
+import {ChangeEvent} from "react";
+import {IClassName} from "@t/root";
 
 export interface IInputFieldProps extends IClassName {
-    setValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    setValue: (e: ChangeEvent<HTMLInputElement>) => void;
     value: string;
     placeHolder?: string;
     triggerInput?: () => void;

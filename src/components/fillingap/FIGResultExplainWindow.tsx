@@ -2,7 +2,6 @@ import {IFIGResultExplainWindow} from "@t/components/fig-result-explain-window";
 import React, {FC} from "react";
 import styles from "@s/components/fig/fig-result-explain-window.module.css";
 import Button from "@ui/Button";
-import {menuMain} from "@r/src/constants/menu";
 import {
   DishName,
   DishIngredients,

@@ -2,7 +2,7 @@ import AnimOpc from "@anim/AnimOpc";
 import React, {FC, JSX} from "react";
 import MainWindow from "@comp/MainWindow";
 import styles from "@s/components/fig/fig-result.module.css";
-import {IFIGResultHOC} from "@r/src/types/components/fig-result";
+import {IFIGResultHOC} from "@t/components/fig-result";
 import FIGResultExplainWindow from "@comp/fillingap/FIGResultExplainWindow";
 import FIGResultWindow from "@comp/fillingap/FIGResultWindow";
 import {cn} from "@ut/shadcn";

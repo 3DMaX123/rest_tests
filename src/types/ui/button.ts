@@ -1,6 +1,6 @@
 import {IClassName} from "@t/root";
 
-export type IButton = (IButtonButton | IButtonLink | IButtonComeBack) & IButtonBase & IClassName
+export type IButton = (IButtonLink | IButtonComeBack | IButtonButton) & IButtonBase & IClassName
 
 export interface IButtonBase {
     text: string;

@@ -1,3 +1,4 @@
+import React from "react";
 import type {Metadata} from "next";
 import "@s/globals.css";
 import "@s/roots.css";

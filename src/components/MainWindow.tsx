@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@s/components/main-window.module.css";
 import {IMainWindow} from "@t/components/main-window";
-import {cn} from "../utils/shadcn";
+import {cn} from "@ut/shadcn";
 
 const MainWindow = ({
   header = "Привіт!",
