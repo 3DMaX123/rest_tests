@@ -1,24 +1,32 @@
 "use client";
 
-import React from 'react';
-import { IInputFields } from '@t/ui/input-field';
+import React, { FC } from 'react';
+import { IInputFieldProps } from '@t/ui/input-field';
 import { cn } from '../utils/shadcn';
 import styles from "@s/ui/input-fields.module.css";
 
-const InputField = ({ className, value, setValue, placehilder = "" }: IInputFields) => {
+const InputField: FC<IInputFieldProps> = ({
+    className,
+    value,
+    setValue,
+    placeHolder = "",
+    triggerInput
+}) => {
 
-    const handleInputText = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(e.target.value);
+    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter' && triggerInput) {
+            triggerInput();
+        }
     };
 
     return (
         <input
-            onChange={handleInputText}
+            onChange={setValue}
             className={cn(className, styles.input)}
-            // onKeyDown={handleKeyDown}
+            onKeyUp={handleKeyPress}
             value={value}
             type={"text"}
-            placeholder={placehilder}
+            placeholder={placeHolder}
             autoComplete="off"
         />
     )

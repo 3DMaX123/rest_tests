@@ -1,6 +1,8 @@
 .mainWindow {
   width: 693px;
   height: 720px;
+
+  gap: 70px;
 }
 
 .buttons {

@@ -6,4 +6,6 @@
     --bc-mainBack-circle-fourth: #F3F3CF;
     --sd-realistic-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
     --tc-grey: rgba(52, 52, 52, 0.62);
+    --tc-correct-ans: #a7fca7;
+    --tc-incorrect-ans: #ff6f6f;
 }

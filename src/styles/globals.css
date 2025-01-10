@@ -16,3 +16,10 @@ p {
   font-family: var(--font-inter);
   font-weight: 400;
 }
+
+.mainWindowStandard {
+  width: 1000px;
+  height: 700px;
+
+  gap: 70px;
+}

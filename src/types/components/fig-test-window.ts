@@ -1,10 +1,11 @@
-import { SetStateAction } from "@t/root";
-import { FillInGapStatus, IFillInGap } from "@t/components/fill-in-gap-test";
+import { FillInGapStatus, IFIGChangeAnswer, IFIGNextQuestion, IFillInGapCrossWindow } from "@t/components/fill-in-gap";
+import { IFillInGaps } from "../pages/fill-in-gap";
 
-export interface IFIGTestWindow extends IFillInGap {
+
+export interface IFIGTestWindow extends IFillInGapCrossWindow, IFIGTestWindowsHOC { }
+
+export interface IFIGTestWindowsHOC extends IFIGChangeAnswer, IFIGNextQuestion {
     answer: string;
-    setAnswer: SetStateAction<string>;
     status: FillInGapStatus;
-    setQuestionNumber: SetStateAction<number>;
-    questionNumber: number;
+    dish: IFillInGaps["menus"][number];
 }
