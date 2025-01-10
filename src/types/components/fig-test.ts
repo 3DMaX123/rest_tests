@@ -1,7 +1,6 @@
-import { FillInGapStatus, IFIGTestAndResultWindow } from "@t/components/fill-in-gap";
-import { IFIGTestWindowsHOC } from "@t/components/fig-test-window";
+import {IFIGTestWindowsHOC} from "@t/components/fig-test-window";
 
-export interface IFIGTestProps extends IFIGTestAndResultWindow, IFIGTestWindowsHOC {
+export interface IFIGTestProps extends IFIGTestWindowsHOC {
     // dish: IFillInGaps["menus"][number];
     changeQuestion: () => void;
     // status: FillInGapStatus;

@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
 const ResultWindow = () => {
-    return (
-        <div>
+  return (
+    <div>
             ResultWindow
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default ResultWindow
+export default ResultWindow;

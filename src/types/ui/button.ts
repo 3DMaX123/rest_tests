@@ -1,4 +1,4 @@
-import { IClassName } from "@t/root";
+import {IClassName} from "@t/root";
 
 export type IButton = (IButtonButton | IButtonLink | IButtonComeBack) & IButtonBase & IClassName
 

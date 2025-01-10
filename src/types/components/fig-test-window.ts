@@ -1,5 +1,10 @@
-import { FillInGapStatus, IFIGChangeAnswer, IFIGNextQuestion, IFillInGapCrossWindow } from "@t/components/fill-in-gap";
-import { IFillInGaps } from "../pages/fill-in-gap";
+import {
+  FillInGapStatus,
+  IFIGChangeAnswer,
+  IFIGNextQuestion,
+  IFillInGapCrossWindow,
+} from "@t/components/fill-in-gap";
+import {IFillInGaps} from "../pages/fill-in-gap";
 
 
 export interface IFIGTestWindow extends IFillInGapCrossWindow, IFIGTestWindowsHOC { }

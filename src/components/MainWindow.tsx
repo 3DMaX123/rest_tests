@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@s/components/main-window.module.css";
-import { IMainWindow } from "@t/components/main-window";
-import { cn } from "../utils/shadcn";
+import {IMainWindow} from "@t/components/main-window";
+import {cn} from "../utils/shadcn";
 
 const MainWindow = ({
   header = "Привіт!",
@@ -9,7 +9,6 @@ const MainWindow = ({
   children,
   className,
 }: IMainWindow) => {
-
   return (
     <div className={cn(styles.mainWindow, className)}>
       <div className={styles.header}>
@@ -18,7 +17,7 @@ const MainWindow = ({
       </div>
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default MainWindow
+export default MainWindow;
