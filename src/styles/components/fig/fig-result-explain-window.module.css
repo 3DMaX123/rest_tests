@@ -1,0 +1,31 @@
+.resultExplainWindow {
+    width: 85%;
+    height: 70%;
+    overflow: auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+
+.resultExplainWindow h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.resultExplainWindow h2:nth-child(1) {
+    margin-top: 0;
+}
+
+.resultExplainWindow p {
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
