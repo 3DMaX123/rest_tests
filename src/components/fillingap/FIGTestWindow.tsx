@@ -1,10 +1,10 @@
-import AnimOpc from '@anim/AnimOpc';
-import React, { FC } from 'react';
+import AnimOpc from "@anim/AnimOpc";
+import React, { FC } from "react";
 import MainWindow from "@comp/MainWindow";
 import styles from "@s/components/fig/fig-test-window.module.css";
-import FIGTest from '@comp/fillingap/FIGTest';
-import { IFIGTestWindow } from '@t/components/fig-test-window';
-import { cn } from '@ut/shadcn';
+import FIGTest from "@comp/fillingap/FIGTest";
+import { IFIGTestWindow } from "@t/components/fig-test-window";
+import { cn } from "@ut/shadcn";
 
 const FIGTestWindow: FC<IFIGTestWindow> = ({
     answer,
@@ -38,6 +38,6 @@ const FIGTestWindow: FC<IFIGTestWindow> = ({
     )
 }
 
-FIGTestWindow.displayName = 'FIGTestWindow';
+FIGTestWindow.displayName = "FIGTestWindow";
 
 export default FIGTestWindow

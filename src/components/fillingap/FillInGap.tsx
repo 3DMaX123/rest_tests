@@ -1,10 +1,10 @@
 "use client"
 
-import React, { FC, JSX, useState } from 'react';
-import { FillInGapStatus, IFillInGap } from '@t/components/fill-in-gap';
-import FIGStart from '@comp/fillingap/FIGStart';
+import React, { FC, JSX, useState } from "react";
+import { FillInGapStatus, IFillInGap } from "@t/components/fill-in-gap";
+import FIGStart from "@comp/fillingap/FIGStart";
 import FIGTestWindow from "@comp/fillingap/FIGTestWindow";
-import FIGResult from '@comp/fillingap/FIGResult';
+import FIGResult from "@comp/fillingap/FIGResult";
 
 interface GameState {
     status: FillInGapStatus;
@@ -14,9 +14,9 @@ interface GameState {
 
 const FillInGap: FC<IFillInGap> = ({ menus }) => {
     const [gameState, setGameState] = useState<GameState>({
-        status: 'start',
+        status: "start",
         questionNumber: 0,
-        answer: ''
+        answer: ""
     });
 
     const { status, questionNumber, answer } = gameState;
@@ -29,8 +29,8 @@ const FillInGap: FC<IFillInGap> = ({ menus }) => {
     const handleNextQuestion = (): void => {
         updateGameState({
             questionNumber: questionNumber + 1,
-            status: 'test',
-            answer: ''
+            status: "test",
+            answer: ""
         });
     };
 
@@ -60,7 +60,7 @@ const FillInGap: FC<IFillInGap> = ({ menus }) => {
     return <div>{renderGameState()}</div>;
 };
 
-FillInGap.displayName = 'FillInGap';
+FillInGap.displayName = "FillInGap";
 
 
 export default FillInGap

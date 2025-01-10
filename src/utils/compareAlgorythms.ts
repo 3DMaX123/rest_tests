@@ -19,7 +19,7 @@ export const levenshteinDistance = (str1: string, str2: string): number => {
 };
 
 export const normalizeAndCompare = (str1: string, str2: string): boolean => {
-    const normalize = (s: string) => s.toLowerCase().trim().replace(/\s+/g, ' ');
+    const normalize = (s: string) => s.toLowerCase().trim().replace(/\s+/g, " ");
     const s1 = normalize(str1);
     const s2 = normalize(str2);
 

@@ -1,6 +1,6 @@
-import React from 'react'
-import MainBack from '@comp/MainBack';
-import MainWindow from '@comp/MainWindow';
+import React from "react"
+import MainBack from "@comp/MainBack";
+import MainWindow from "@comp/MainWindow";
 
 const Error = () => {
     return (

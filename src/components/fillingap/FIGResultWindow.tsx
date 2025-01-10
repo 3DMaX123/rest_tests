@@ -1,23 +1,23 @@
-import { coolCorrectPhrases, coolIncorrectPhrases } from '@c/cool-pfrases';
-import Button from '@ui/Button';
-import { normalizeAndCompare } from '@ut/compareAlgorythms';
-import { randomNumber } from '@ut/generateRandom';
+import { coolCorrectPhrases, coolIncorrectPhrases } from "@c/cool-pfrases";
+import Button from "@ui/Button";
+import { normalizeAndCompare } from "@ut/compareAlgorythms";
+import { randomNumber } from "@ut/generateRandom";
 import styles from "@s/components/fig/fig-result-window.module.css";
-import React, { FC } from 'react';
-import { IFIGResultWindow } from '@t/components/fig-result-window';
+import React, { FC } from "react";
+import { IFIGResultWindow } from "@t/components/fig-result-window";
 
 const COLORS = {
     CORRECT: {
-        BG: 'var(--bg-correct-ans)',
-        TC: 'var(--tc-correct-ans)',
+        BG: "var(--bg-correct-ans)",
+        TC: "var(--tc-correct-ans)",
     },
     INCORRECT: {
-        BG: 'var(--bg-incorrect-ans)',
-        TC: 'var(--tc-incorrect-ans)',
+        BG: "var(--bg-incorrect-ans)",
+        TC: "var(--tc-incorrect-ans)",
     }
 } as const;
 
-type ResultStatus = 'correct' | 'incorrect';
+type ResultStatus = "correct" | "incorrect";
 
 
 const FIGResultWindow: FC<IFIGResultWindow> = ({
@@ -27,18 +27,18 @@ const FIGResultWindow: FC<IFIGResultWindow> = ({
     handleChangeDisplay,
 }) => {
     const isAnswerCorrect = normalizeAndCompare(dish.name, answer);
-    const status: ResultStatus = isAnswerCorrect ? 'correct' : 'incorrect';
+    const status: ResultStatus = isAnswerCorrect ? "correct" : "incorrect";
 
     const getResultText = (status: ResultStatus): string => {
-        const phrases = status === 'correct' ? coolCorrectPhrases : coolIncorrectPhrases;
+        const phrases = status === "correct" ? coolCorrectPhrases : coolIncorrectPhrases;
         return phrases[randomNumber(0, phrases.length)];
     };
 
     const getResultBgColor = (status: ResultStatus): string => {
-        return status === 'correct' ? COLORS.CORRECT.BG : COLORS.INCORRECT.BG;
+        return status === "correct" ? COLORS.CORRECT.BG : COLORS.INCORRECT.BG;
     };
     const getResultTcColor = (status: ResultStatus): string => {
-        return status === 'correct' ? COLORS.CORRECT.TC : COLORS.INCORRECT.TC;
+        return status === "correct" ? COLORS.CORRECT.TC : COLORS.INCORRECT.TC;
     };
 
     const handleChangeToHint = () => {

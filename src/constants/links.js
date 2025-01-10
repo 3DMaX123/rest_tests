@@ -5,13 +5,13 @@ export const links = {
     "LSpeedTest": "/quick-thought",
     "LDishByGuess": "/dish-by-guess",
     "LFillGap": "/fill-in-gaps",
-}
+};
 
 export const LCorrectAns = {
     "LCACategoryMenu": links.LCorrectAns + "/category-menu",
     "LCAIngredients": links.LCorrectAns + "/ingredients",
     "LCAPrice": links.LCorrectAns + "/price",
-}
+};
 
 export const LOpenQuestions = {
     "LOQNameToDescription": "/name-to-description",

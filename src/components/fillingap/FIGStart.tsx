@@ -1,6 +1,6 @@
-import { IFigStart } from '@t/components/fig-start'
-import Button from '@ui/Button'
-import React, { FC } from 'react'
+import { IFigStart } from "@t/components/fig-start"
+import Button from "@ui/Button"
+import React, { FC } from "react"
 
 const FIGStart: FC<IFigStart> = ({ setStatus }) => {
 
@@ -19,6 +19,6 @@ const FIGStart: FC<IFigStart> = ({ setStatus }) => {
     )
 }
 
-FIGStart.displayName = 'FIGStart';
+FIGStart.displayName = "FIGStart";
 
 export default FIGStart

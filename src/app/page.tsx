@@ -1,7 +1,7 @@
-import React from 'react';
-import MainWindow from '@comp/MainWindow';
+import React from "react";
+import MainWindow from "@comp/MainWindow";
 import styles from "@s/pages/main-page.module.css";
-import Button from '@ui/Button';
+import Button from "@ui/Button";
 import { links } from "@c/links";
 import { JSONToArray } from "../utils/JsonToArray";
 import { randomNumber } from "../utils/generateRandom";

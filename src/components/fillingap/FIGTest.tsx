@@ -1,8 +1,8 @@
-import { IFIGTestProps } from '@t/components/fig-test';
-import Button from '@ui/Button';
-import React, { FC } from 'react';
+import { IFIGTestProps } from "@t/components/fig-test";
+import Button from "@ui/Button";
+import React, { FC } from "react";
 import styles from "@s/components/fig/fig-test.module.css";
-import InputField from '@ui/InputField';
+import InputField from "@ui/InputField";
 
 const FIGTest: FC<IFIGTestProps> = ({ handleNextQuestion, dish, changeQuestion, answer, setAnswer }) => {
 
@@ -51,6 +51,6 @@ const FIGTest: FC<IFIGTestProps> = ({ handleNextQuestion, dish, changeQuestion, 
     )
 }
 
-FIGTest.displayName = 'FIGTest';
+FIGTest.displayName = "FIGTest";
 
 export default FIGTest
