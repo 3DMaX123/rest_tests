@@ -1,5 +1,4 @@
 import {IFIGTestProps} from "@t/components/fig-test";
-import console from "console";
 import Button from "@ui/Button";
 import React, {FC} from "react";
 import styles from "@s/components/fig/fig-test.module.css";
@@ -28,6 +27,7 @@ const FIGTest: FC<IFIGTestProps> = ({handleNextQuestion, dish, changeQuestion, a
     setAnswer(event.target.value);
   };
 
+  // eslint-disable-next-line no-undef
   console.log(dish.name);
 
   return (
