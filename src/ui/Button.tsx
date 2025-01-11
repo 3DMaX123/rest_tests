@@ -21,7 +21,7 @@ const Button = ({
       }
       {is === "comeBack" &&
       <Link className={styles.homeIcon} href={"/"}>
-        <img src="/home.svg" className={styles.svg} />
+        <img src="/arrow.svg" className={styles.svg} />
       </Link>
       }
     </>

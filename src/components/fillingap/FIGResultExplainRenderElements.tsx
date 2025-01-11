@@ -7,7 +7,12 @@ import {
   AllergensProps,
   DecorationProps,
   AdditionalProps,
+  DishPhotoProps,
 } from "@t/components/fig-result-explaint-render-element";
+
+const DishPhoto: FC<DishPhotoProps> = ({photo, type}) => (
+  <img className={styles.photo} src={`dishPhoto/${type}/${photo}`} alt={photo} />
+);
 
 const DishName: FC<DishNameProps> = ({name, description}) => (
   <>
@@ -56,14 +61,34 @@ const DishDecoration: FC<DecorationProps> = ({decoration}) => (
   </>
 );
 
-const DishAdditional: FC<AdditionalProps> = ({additional}) => (
-  <>
-    <h2 className={styles.decorationHeader}>Додаткові відомості</h2>
-    <p className={styles.decoration}>{additional}</p>
-  </>
-);
+const DishAdditional: FC<AdditionalProps> = ({dish}) => {
+  const checkIfTime = (time: string): string => {
+    return time.includes("хв") ? time : time + " хв";
+  };
+
+  const checkIfWeight = (weight: string) => {
+    if (weight.includes("г")) {
+      return weight;
+    } else if (weight.includes("кг")) {
+      return weight;
+    } else {
+      return weight + " г";
+    };
+  };
+
+  return (
+    <>
+      <h2 className={styles.decorationHeader}>Додаткові відомості</h2>
+      <div className={styles.decorations}>
+        {dish.time && <p className={styles.decorationOneByOne}>{checkIfTime(dish.time)}</p>}
+        {dish.weight && <p className={styles.decorationOneByOne}>{checkIfWeight(dish.weight)}</p>}
+      </div>
+    </>
+  );
+};
 
 export {
+  DishPhoto,
   DishName,
   DishIngredients,
   DishRecipe,

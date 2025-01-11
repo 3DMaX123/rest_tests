@@ -1,3 +1,10 @@
+import {IFillInGaps} from "../pages/fill-in-gap";
+
+export interface DishPhotoProps {
+    photo: string;
+    type: string;
+}
+
 export interface DishNameProps {
     name: string;
     description?: string;
@@ -20,5 +27,5 @@ export interface DecorationProps {
 }
 
 export interface AdditionalProps {
-    additional: string[];
+    dish: IFillInGaps["menus"][number];
 }

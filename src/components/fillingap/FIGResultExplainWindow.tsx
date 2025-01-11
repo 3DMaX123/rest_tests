@@ -3,11 +3,13 @@ import React, {FC} from "react";
 import styles from "@s/components/fig/fig-result-explain-window.module.css";
 import Button from "@ui/Button";
 import {
+  DishPhoto,
   DishName,
   DishIngredients,
   DishRecipe,
   DishAllergens,
   DishDecoration,
+  DishAdditional,
 } from "@comp/fillingap/FIGResultExplainRenderElements";
 
 const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
@@ -21,11 +23,13 @@ const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
 
   const renderElements = () => {
     const sections = [
+      dish.photo !== "" && dish.type !== "" && <DishPhoto photo={dish.photo} type={dish.type} />,
       dish.name && <DishName name={dish.name} description={dish.description} />,
       dish.ingredients && <DishIngredients ingredients={dish.ingredients} />,
-      dish.ingByIng && <DishRecipe ingredients={dish.ingByIng} />,
-      dish.allergen && <DishAllergens allergens={dish.allergen} />,
-      dish.decoration && <DishDecoration decoration={dish.decoration} />,
+      dish.ingByIng.length && <DishRecipe ingredients={dish.ingByIng} />,
+      dish.allergen.length && <DishAllergens allergens={dish.allergen} />,
+      dish.decoration !== "" && <DishDecoration decoration={dish.decoration} />,
+      <DishAdditional dish={dish} />,
     ].filter(Boolean);
 
     return sections;
@@ -37,7 +41,6 @@ const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
         <div className={styles.main}>
           <div className={styles.mainIfo}>
             {renderElements()}
-            <p>{dish.type}</p>
           </div>
         </div>
         <div className={styles.blurUnder}></div>

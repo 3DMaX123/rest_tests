@@ -5,8 +5,15 @@
     margin: 25px auto;
 }
 
+.photo{
+    margin: auto;
+    max-width: 316px;
+    max-height: fit-content;
+}
+
 .recipe,
-.allergen {
+.allergen,
+.decorations {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -20,7 +27,8 @@
 }
 
 .recipeOneByOne,
-.allergenOneByOne {
+.allergenOneByOne,
+.decorationOneByOne {
     position: relative;
 
     padding: 7px 14px;
@@ -32,4 +40,8 @@
 
     /* box-shadow: rgba(45, 35, 66, 0.1) 0 2px 4px,
         rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset; */
+}
+
+.decorations p{
+    text-transform: lowercase;
 }
