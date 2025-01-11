@@ -32,11 +32,18 @@ const DishIngredients: FC<IngredientsProps> = ({ingredients}) => (
 
 const DishRecipe: FC<RecipeProps> = ({ingredients}) => (
   <div className={styles.recipe}>
-    {ingredients.map((ingredient, index) => (
-      <p key={index} className={styles.recipeOneByOne}>
-        {ingredient}
-      </p>
-    ))}
+    {ingredients.map((ingredient, index) => {
+      return (
+        <>
+          {ingredient !== "" &&
+            <p key={index} className={styles.recipeOneByOne}>
+              {ingredient}
+            </p>
+          }
+        </>
+      );
+    },
+    )}
   </div>
 );
 

@@ -1,4 +1,5 @@
 import {IFIGTestProps} from "@t/components/fig-test";
+import console from "console";
 import Button from "@ui/Button";
 import React, {FC} from "react";
 import styles from "@s/components/fig/fig-test.module.css";
@@ -27,10 +28,11 @@ const FIGTest: FC<IFIGTestProps> = ({handleNextQuestion, dish, changeQuestion, a
     setAnswer(event.target.value);
   };
 
+  console.log(dish.name);
+
   return (
     <div className={styles.main}>
       <div className={styles.text}>
-        <p>{dish.name}</p>
         {renderIngredients()}
         {renderDescription()}
       </div>
