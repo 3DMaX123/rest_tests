@@ -27,6 +27,12 @@ const FIGTest: FC<IFIGTestProps> = ({handleNextQuestion, dish, changeQuestion, a
     setAnswer(event.target.value);
   };
 
+  const nextQuestion = () => {
+    handleNextQuestion({
+      type: "next",
+    });
+  };
+
   // eslint-disable-next-line no-undef
   console.log(dish.name);
 
@@ -45,7 +51,7 @@ const FIGTest: FC<IFIGTestProps> = ({handleNextQuestion, dish, changeQuestion, a
         />
         <div className={styles.buttons}>
           <Button is='button' text='Відповісти' action={changeQuestion} to={false} />
-          <Button is='button' text='Пропустити' action={handleNextQuestion} to={false} />
+          <Button is='button' text='Пропустити' action={nextQuestion} to={false} />
         </div>
       </div>
     </div>

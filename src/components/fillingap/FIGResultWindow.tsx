@@ -1,10 +1,10 @@
 import {coolCorrectPhrases, coolIncorrectPhrases} from "@c/cool-pfrases";
 import Button from "@ui/Button";
-import {normalizeAndCompare} from "@ut/compareAlgorythms";
 import {randomNumber} from "@ut/generateRandom";
 import styles from "@s/components/fig/fig-result-window.module.css";
 import React, {FC} from "react";
 import {IFIGResultWindow} from "@t/components/fig-result-window";
+import {FIGResultStatus} from "@t/components/fig-result";
 
 const COLORS = {
   CORRECT: {
@@ -17,27 +17,22 @@ const COLORS = {
   },
 } as const;
 
-type ResultStatus = "correct" | "incorrect";
-
 
 const FIGResultWindow: FC<IFIGResultWindow> = ({
   dish,
-  answer,
-  handleNextQuestion,
+  triggerNextQuestion,
   handleChangeDisplay,
+  status,
 }) => {
-  const isAnswerCorrect = normalizeAndCompare(dish.name, answer);
-  const status: ResultStatus = isAnswerCorrect ? "correct" : "incorrect";
-
-  const getResultText = (status: ResultStatus): string => {
+  const getResultText = (status: FIGResultStatus): string => {
     const phrases = status === "correct" ? coolCorrectPhrases : coolIncorrectPhrases;
     return phrases[randomNumber(0, phrases.length)];
   };
 
-  const getResultBgColor = (status: ResultStatus): string => {
+  const getResultBgColor = (status: FIGResultStatus): string => {
     return status === "correct" ? COLORS.CORRECT.BG : COLORS.INCORRECT.BG;
   };
-  const getResultTcColor = (status: ResultStatus): string => {
+  const getResultTcColor = (status: FIGResultStatus): string => {
     return status === "correct" ? COLORS.CORRECT.TC : COLORS.INCORRECT.TC;
   };
 
@@ -62,7 +57,7 @@ const FIGResultWindow: FC<IFIGResultWindow> = ({
       <div className={styles.buttons}>
         <Button
           className='bg-white'
-          is='button' action={handleNextQuestion}
+          is='button' action={triggerNextQuestion}
           text="Наступне питання"
           to={false}
         />

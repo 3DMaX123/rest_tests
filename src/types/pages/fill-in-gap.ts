@@ -1,5 +1,5 @@
 export interface IFillInGaps {
-    menus: {
+    menu: {
         name: string;
         photo: string;
         weight: string;

@@ -2,10 +2,11 @@ import AnimOpc from "@anim/AnimOpc";
 import React, {FC, JSX} from "react";
 import MainWindow from "@comp/MainWindow";
 import styles from "@s/components/fig/fig-result.module.css";
-import {IFIGResultHOC} from "@t/components/fig-result";
+import {FIGResultStatus, IFIGResult} from "@t/components/fig-result";
 import FIGResultExplainWindow from "@comp/fillingap/FIGResultExplainWindow";
 import FIGResultWindow from "@comp/fillingap/FIGResultWindow";
 import {cn} from "@ut/shadcn";
+import {normalizeAndCompare} from "@r/src/utils/compareAlgorythms";
 
 type IDisplay = "result" | "hint";
 
@@ -21,8 +22,10 @@ const Text = {
 } as const;
 
 
-const FIGResult: FC<IFIGResultHOC> = ({dish, answer, handleNextQuestion}) => {
+const FIGResult: FC<IFIGResult> = ({dish, answer, handleNextQuestion}) => {
   const [display, setDisplay] = React.useState<IDisplay>("result");
+  const isAnswerCorrect = normalizeAndCompare(dish.name, answer);
+  const status: FIGResultStatus = isAnswerCorrect ? "correct" : "incorrect";
 
   const handleDisplayChange = (changeTo: IDisplay) => {
     setDisplay(changeTo);
@@ -32,19 +35,25 @@ const FIGResult: FC<IFIGResultHOC> = ({dish, answer, handleNextQuestion}) => {
     return display === "result" ? styles.mainWindowResult : styles.mainWindowHint;
   };
 
+  const triggerNextQuestion = () => {
+    handleNextQuestion({type: status});
+    handleNextQuestion({type: "next"});
+  };
+
+
   const renderWindowContent = (): JSX.Element | null => {
     const states = {
       result:
                 <FIGResultWindow
                   dish={dish}
-                  answer={answer}
-                  handleNextQuestion={handleNextQuestion}
+                  status={status}
+                  triggerNextQuestion={triggerNextQuestion}
                   handleChangeDisplay={handleDisplayChange}
                 />,
       hint:
                 <FIGResultExplainWindow
                   dish={dish}
-                  handleNextQuestion={handleNextQuestion}
+                  triggerNextQuestion={triggerNextQuestion}
                   handleChangeDisplay={handleDisplayChange}
                 />,
     };
