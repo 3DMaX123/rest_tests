@@ -1,0 +1,25 @@
+.checkList{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    box-shadow: var(--sd-realistic-shadow);
+    text-transform: capitalize;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.checkList li{
+    margin-bottom: 10px;
+}
+
+
+.checkList li:last-of-type{
+    margin-bottom: 0px;
+}
+
+.checkList li input{
+    margin-right: 10px;
+}

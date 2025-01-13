@@ -1,37 +1,53 @@
 "use client";
 
 import React, {FC, JSX, useState} from "react";
-import {FillInGapStatus, IFillInGap} from "@t/components/fill-in-gap";
+import {IFIGGameStateProps, IFIGGameUpdateProps, IFillInGap} from "@t/components/fill-in-gap";
+import styles from "@s/components/fig/fill-in-gap.module.css";
 import FIGStart from "@comp/fillingap/FIGStart";
 import FIGTestWindow from "@comp/fillingap/FIGTestWindow";
 import FIGResult from "@comp/fillingap/FIGResult";
 
-interface GameState {
-    status: FillInGapStatus;
-    questionNumber: number;
-    answer: string;
-}
-
-const FillInGap: FC<IFillInGap> = ({menus}) => {
-  const [gameState, setGameState] = useState<GameState>({
+const FillInGap: FC<IFillInGap> = ({menu}) => {
+  const [gameState, setGameState] = useState<IFIGGameStateProps>({
     status: "start",
     questionNumber: 0,
     answer: "",
+    correctAnswer: 0,
+    incorrectAnswer: 0,
   });
+  const {
+    status,
+    questionNumber,
+    answer,
+    correctAnswer,
+    incorrectAnswer,
+  } = gameState;
+  const currentDish = menu[questionNumber];
 
-  const {status, questionNumber, answer} = gameState;
-  const currentDish = menus[questionNumber];
-
-  const updateGameState = (newState: Partial<GameState>): void => {
+  const updateGameState = (newState: Partial<IFIGGameStateProps>): void => {
     setGameState((prev) => ({...prev, ...newState}));
   };
 
-  const handleNextQuestion = (): void => {
-    updateGameState({
-      questionNumber: questionNumber + 1,
-      status: "test",
-      answer: "",
-    });
+  const handleGameUpdate = (action: IFIGGameUpdateProps): void => {
+    switch (action.type) {
+      case "next":
+        updateGameState({
+          questionNumber: questionNumber + 1,
+          status: "test",
+          answer: "",
+        });
+        break;
+      case "correct":
+        updateGameState({
+          correctAnswer: correctAnswer + 1,
+        });
+        break;
+      case "incorrect":
+        updateGameState({
+          incorrectAnswer: incorrectAnswer + 1,
+        });
+        break;
+    }
   };
 
   const renderGameState = (): JSX.Element | null => {
@@ -40,7 +56,7 @@ const FillInGap: FC<IFillInGap> = ({menus}) => {
         setStatus={(status) => updateGameState({status})}
       />,
       test: <FIGTestWindow
-        handleNextQuestion={handleNextQuestion}
+        handleNextQuestion={handleGameUpdate}
         answer={answer}
         setAnswer={(answer) => updateGameState({answer})}
         status={status}
@@ -48,7 +64,7 @@ const FillInGap: FC<IFillInGap> = ({menus}) => {
         dish={currentDish}
       />,
       result: <FIGResult
-        handleNextQuestion={handleNextQuestion}
+        handleNextQuestion={handleGameUpdate}
         dish={currentDish}
         answer={answer}
       />,
@@ -57,10 +73,13 @@ const FillInGap: FC<IFillInGap> = ({menus}) => {
     return states[status as keyof typeof states] || null;
   };
 
-  return <div>{renderGameState()}</div>;
+  return (
+    <div className={styles.main}>
+      {renderGameState()}
+    </div>
+  );
 };
 
 FillInGap.displayName = "FillInGap";
-
 
 export default FillInGap;

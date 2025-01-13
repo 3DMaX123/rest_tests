@@ -12,5 +12,5 @@ export interface IFIGTestWindow extends IFillInGapCrossWindow, IFIGTestWindowsHO
 export interface IFIGTestWindowsHOC extends IFIGChangeAnswer, IFIGNextQuestion {
     answer: string;
     status: FillInGapStatus;
-    dish: IFillInGaps["menus"][number];
+    dish: IFillInGaps["menu"][number];
 }

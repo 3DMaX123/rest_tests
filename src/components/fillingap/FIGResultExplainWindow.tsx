@@ -15,7 +15,7 @@ import {
 const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
   dish,
   handleChangeDisplay,
-  handleNextQuestion,
+  triggerNextQuestion,
 }) => {
   const handleChangeToHint = () => {
     handleChangeDisplay("result");
@@ -58,7 +58,7 @@ const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
         <Button
           className='bg-white'
           is='button'
-          action={handleNextQuestion}
+          action={triggerNextQuestion}
           text="Наступне питання"
           to={false}
         />

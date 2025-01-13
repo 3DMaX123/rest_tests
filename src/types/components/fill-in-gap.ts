@@ -14,5 +14,20 @@ export interface IFIGChangeAnswer {
 }
 
 export interface IFIGNextQuestion {
-    handleNextQuestion: () => void;
+    handleNextQuestion: (action: IFIGGameUpdateProps) => void;
 }
+
+export type IFIGTestType = string[];
+
+export interface IFIGGameStateProps {
+    status: FillInGapStatus;
+    questionNumber: number;
+    answer: string;
+    correctAnswer: number;
+    incorrectAnswer: number;
+}
+
+export type IFIGGameUpdateProps =
+  | { type: "next" }
+  | { type: "correct" }
+  | { type: "incorrect" };
