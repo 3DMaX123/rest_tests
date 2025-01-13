@@ -23,16 +23,49 @@ const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
 
   const renderElements = () => {
     const sections = [
-      dish.photo !== "" && dish.type !== "" && <DishPhoto photo={dish.photo} type={dish.type} />,
-      dish.name && <DishName name={dish.name} description={dish.description} />,
-      dish.ingredients && <DishIngredients ingredients={dish.ingredients} />,
-      dish.ingByIng.length && <DishRecipe ingredients={dish.ingByIng} />,
-      dish.allergen.length && <DishAllergens allergens={dish.allergen} />,
-      dish.decoration !== "" && <DishDecoration decoration={dish.decoration} />,
-      <DishAdditional dish={dish} />,
-    ].filter(Boolean);
+      {
+        id: "photo",
+        content: dish.photo !== "" && dish.type !== "" &&
+          <DishPhoto photo={dish.photo} type={dish.type} />,
+      },
+      {
+        id: "name",
+        content: dish.name &&
+          <DishName name={dish.name} description={dish.description} />,
+      },
+      {
+        id: "ingredients",
+        content: dish.ingredients &&
+          <DishIngredients ingredients={dish.ingredients} />,
+      },
+      {
+        id: "recipe",
+        content: dish.ingByIng.length &&
+          <DishRecipe ingredients={dish.ingByIng} />,
+      },
+      {
+        id: "allergens",
+        content: dish.allergen.length &&
+          <DishAllergens allergens={dish.allergen} />,
+      },
+      {
+        id: "decoration",
+        content: dish.decoration !== "" &&
+          <DishDecoration decoration={dish.decoration} />,
+      },
+      {
+        id: "additional",
+        content: <DishAdditional dish={dish} />,
+      },
+    ];
 
-    return sections;
+    return sections
+        .filter((section) => section.content)
+        .map((section) => (
+          <React.Fragment key={section.id}>
+            {section.content}
+          </React.Fragment>
+        ));
   };
 
   return (
