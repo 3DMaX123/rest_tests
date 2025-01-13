@@ -27,5 +27,5 @@ export interface DecorationProps {
 }
 
 export interface AdditionalProps {
-    dish: IFillInGaps["menus"][number];
+    dish: IFillInGaps["menu"][number];
 }
