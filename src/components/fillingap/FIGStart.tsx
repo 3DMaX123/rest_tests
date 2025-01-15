@@ -13,7 +13,6 @@ const FIGStart: FC<IFigStart> = ({setStatus}) => {
       is='button'
       action={handleTestStart}
       text="Розпочати"
-      to={false}
     />
   );
 };

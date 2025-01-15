@@ -14,13 +14,13 @@ export default function Home() {
     <div className='flex items-center justify-center'>
       <MainWindow className={styles.mainWindow}>
         <div className={styles.buttons}>
-          <Button is="link" to={links.LCorrectAns} text="Правильні відповіді" action={false} />
-          <Button is="link" to={links.LOpenQuestions} text="Відкриті питання" action={false} />
-          <Button is="link" to={links.LCategories} text="Категорії" action={false} />
-          <Button is="link" to={links.LSpeedTest} text="Швидка думка" action={false} />
-          <Button is="link" to={links.LDishByGuess} text="Страва по опису" action={false} />
-          <Button is="link" to={links.LFillGap} text="Заповнити пропуски" action={false} />
-          <Button is="link" to={array[randomArray]} text="Здивуй мене" action={false} />
+          <Button is="link" to={links.LCorrectAns} text="Правильні відповіді" />
+          <Button is="link" to={links.LOpenQuestions} text="Відкриті питання" />
+          <Button is="link" to={links.LCategories} text="Категорії" />
+          <Button is="link" to={links.LSpeedTest} text="Швидка думка" />
+          <Button is="link" to={links.LDishByGuess} text="Страва по опису" />
+          <Button is="link" to={links.LFillGap} text="Заповнити пропуски" />
+          <Button is="link" to={array[randomArray]} text="Здивуй мене" />
         </div>
       </MainWindow>
     </div>

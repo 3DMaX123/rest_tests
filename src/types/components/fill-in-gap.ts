@@ -30,4 +30,5 @@ export interface IFIGGameStateProps {
 export type IFIGGameUpdateProps =
   | { type: "next" }
   | { type: "correct" }
-  | { type: "incorrect" };
+  | { type: "incorrect" }
+  | { type: "end" };

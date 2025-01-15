@@ -1,4 +1,4 @@
-export const figCheckList = [
+export const FIG_CHECK_LIST = [
     ["burgers", "Бургери"],
     ["desserts", "Десерти"],
     ["italianBread", "Італійський хліб"],
@@ -10,3 +10,15 @@ export const figCheckList = [
     ["snacks", "Закуски"],
     ["soups", "Супи"],
 ]
+
+export const RESULT_TEXT_COLORS = {
+    CORRECT: {
+      BG: "var(--bg-correct-ans)",
+      TC: "var(--tc-correct-ans)",
+    },
+    INCORRECT: {
+      BG: "var(--bg-incorrect-ans)",
+      TC: "var(--tc-incorrect-ans)",
+    },
+};
+  

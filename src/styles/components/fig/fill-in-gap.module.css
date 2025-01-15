@@ -1,0 +1,10 @@
+.main{
+    position: relative;
+}
+
+.countDown{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--tc-grey);
+}

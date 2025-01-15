@@ -1,5 +1,18 @@
-import {IFIGTestWindowsHOC} from "@t/components/fig-test-window";
+import {
+  IFIGChangeAnswer,
+  IFIGNextQuestion,
+  IFillInGapCrossWindow,
+} from "@t/components/fill-in-gap";
+import {IFillInGaps} from "@t/pages/fill-in-gap";
 
-export interface IFIGTestProps extends IFIGTestWindowsHOC {
-    changeQuestion: () => void;
+
+export interface IFIGTestWindow extends
+IFillInGapCrossWindow,
+IFIGChangeAnswer,
+IFIGNextQuestion{
+  answer: string;
+  dish: IFillInGaps["menu"][number];
+  questionNumber: number;
+  menuLength: number;
+
 }

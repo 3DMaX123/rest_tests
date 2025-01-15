@@ -2,11 +2,12 @@ import AnimOpc from "@anim/AnimOpc";
 import React, {FC, JSX} from "react";
 import MainWindow from "@comp/MainWindow";
 import styles from "@s/components/fig/fig-result.module.css";
-import {FIGResultStatus, IFIGResult} from "@t/components/fig-result";
-import FIGResultExplainWindow from "@comp/fillingap/FIGResultExplainWindow";
-import FIGResultWindow from "@comp/fillingap/FIGResultWindow";
+import {IFIGResult} from "@t/components/fig-result";
+import DishDetailsWindow from "@comp/fillingap/DishDetailsWindow";
+import FIGResultUi from "@comp/fillingap/FIGResultUI";
 import {cn} from "@ut/shadcn";
-import {normalizeAndCompare} from "@r/src/utils/compareAlgorythms";
+import {normalizeAndCompare} from "@ut/compareAlgorythms";
+import {ResultUiStatus} from "@t/ui/result-ui";
 
 type IDisplay = "result" | "hint";
 
@@ -22,10 +23,16 @@ const Text = {
 } as const;
 
 
-const FIGResult: FC<IFIGResult> = ({dish, answer, handleNextQuestion}) => {
+const FIGResult: FC<IFIGResult> = ({
+  dish,
+  answer,
+  handleNextQuestion,
+  questionNumber,
+  menuLength,
+}) => {
   const [display, setDisplay] = React.useState<IDisplay>("result");
   const isAnswerCorrect = normalizeAndCompare(dish.name, answer);
-  const status: FIGResultStatus = isAnswerCorrect ? "correct" : "incorrect";
+  const status: ResultUiStatus = isAnswerCorrect ? "correct" : "incorrect";
 
   const handleDisplayChange = (changeTo: IDisplay) => {
     setDisplay(changeTo);
@@ -36,22 +43,26 @@ const FIGResult: FC<IFIGResult> = ({dish, answer, handleNextQuestion}) => {
   };
 
   const triggerNextQuestion = () => {
-    handleNextQuestion({type: status});
-    handleNextQuestion({type: "next"});
+    if (questionNumber + 1 === menuLength) {
+      handleNextQuestion({type: "end"});
+    } else {
+      handleNextQuestion({type: status === "correct" ? "correct" : "incorrect"});
+      handleNextQuestion({type: "next"});
+    }
   };
 
 
   const renderWindowContent = (): JSX.Element | null => {
     const states = {
       result:
-                <FIGResultWindow
-                  dish={dish}
+                <FIGResultUi
+                  correctAnswer={dish.name}
                   status={status}
                   triggerNextQuestion={triggerNextQuestion}
                   handleChangeDisplay={handleDisplayChange}
                 />,
       hint:
-                <FIGResultExplainWindow
+                <DishDetailsWindow
                   dish={dish}
                   triggerNextQuestion={triggerNextQuestion}
                   handleChangeDisplay={handleDisplayChange}
@@ -75,5 +86,7 @@ const FIGResult: FC<IFIGResult> = ({dish, answer, handleNextQuestion}) => {
     </div>
   );
 };
+
+FIGResult.displayName = "FIGResult";
 
 export default FIGResult;

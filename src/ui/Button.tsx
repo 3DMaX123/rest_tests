@@ -1,5 +1,5 @@
 import React from "react";
-import {IButton} from "@t/ui/button";
+import {ButtonProps} from "@t/ui/button";
 import styles from "@s/ui/button.module.css";
 import {cn} from "@ut/shadcn";
 import Link from "next/link";
@@ -10,20 +10,24 @@ const Button = ({
   to,
   action,
   className,
-}: IButton) => {
-  return (
-    <>
-      {is === "button" &&
+}: ButtonProps) => {
+  const renderButtons = {
+    button: (
       <button className={cn(styles.button, className)} onClick={action}>{text}</button>
-      }
-      {is === "link" &&
-      <Link className={cn(styles.link, className)} href={to}>{text}</Link>
-      }
-      {is === "comeBack" &&
+    ),
+    link: (
+      <Link className={cn(styles.link, className)} href={to ? to : ""}>{text}</Link>
+    ),
+    comeBack: (
       <Link className={styles.homeIcon} href={"/"}>
         <img src="/arrow.svg" className={styles.svg} />
       </Link>
-      }
+    ),
+  };
+
+  return (
+    <>
+      {renderButtons[is]}
     </>
   );
 };

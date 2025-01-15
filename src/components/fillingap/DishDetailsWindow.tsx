@@ -1,18 +1,10 @@
-import {IFIGResultExplainWindow} from "@t/components/fig-result-explain-window";
+import {IDishDetailsWindow} from "@t/components/dish-details-window";
 import React, {FC} from "react";
-import styles from "@s/components/fig/fig-result-explain-window.module.css";
+import styles from "@s/components/fig/dish-details-window.module.css";
 import Button from "@ui/Button";
-import {
-  DishPhoto,
-  DishName,
-  DishIngredients,
-  DishRecipe,
-  DishAllergens,
-  DishDecoration,
-  DishAdditional,
-} from "@comp/fillingap/FIGResultExplainRenderElements";
+import DishDetails from "@comp/fillingap/DishDetails";
 
-const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
+const DishDetailsWindow: FC<IDishDetailsWindow> = ({
   dish,
   handleChangeDisplay,
   triggerNextQuestion,
@@ -26,36 +18,36 @@ const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
       {
         id: "photo",
         content: dish.photo !== "" && dish.type !== "" &&
-          <DishPhoto photo={dish.photo} type={dish.type} />,
+          <DishDetails.Photo photo={dish.photo} type={dish.type} />,
       },
       {
         id: "name",
         content: dish.name &&
-          <DishName name={dish.name} description={dish.description} />,
+          <DishDetails.Title name={dish.name} description={dish.description} />,
       },
       {
         id: "ingredients",
         content: dish.ingredients &&
-          <DishIngredients ingredients={dish.ingredients} />,
+          <DishDetails.Ingredients ingredients={dish.ingredients} />,
       },
       {
         id: "recipe",
         content: dish.ingByIng.length &&
-          <DishRecipe ingredients={dish.ingByIng} />,
+          <DishDetails.Recipe recipe={dish.ingByIng} />,
       },
       {
         id: "allergens",
         content: dish.allergen.length &&
-          <DishAllergens allergens={dish.allergen} />,
+          <DishDetails.Allergen allergens={dish.allergen} />,
       },
       {
         id: "decoration",
         content: dish.decoration !== "" &&
-          <DishDecoration decoration={dish.decoration} />,
+          <DishDetails.Decorations decoration={dish.decoration} />,
       },
       {
         id: "additional",
-        content: <DishAdditional dish={dish} />,
+        content: <DishDetails.Additional dish={dish} />,
       },
     ];
 
@@ -86,18 +78,16 @@ const FIGResultExplainWindow: FC<IFIGResultExplainWindow> = ({
           is='button'
           action={handleChangeToHint}
           text="Повернутись назад"
-          to={false}
         />
         <Button
           className='bg-white'
           is='button'
           action={triggerNextQuestion}
           text="Наступне питання"
-          to={false}
         />
       </div>
     </>
   );
 };
 
-export default FIGResultExplainWindow;
+export default DishDetailsWindow;

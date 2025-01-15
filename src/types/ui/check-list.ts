@@ -1,12 +1,3 @@
-import {IFIGTestType} from "@t/components/fill-in-gap";
-
-export interface ICheckListProps{
-    selectedItems: IFIGTestType;
-    onUpdate: IUpdateCheckList;
-    list: string[][]; // [type, ua]
+export interface ICheckListProps {
+    cookieName: string;
 }
-
-export type IUpdateCheckList = (
-    item: string,
-    action: "delete" | "save"
-) => void;

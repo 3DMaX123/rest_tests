@@ -23,3 +23,7 @@ p {
 
   gap: 70px;
 }
+
+button {
+  font-size: 18px;
+}

@@ -1,10 +1,21 @@
-import {IFIGTestProps} from "@t/components/fig-test";
-import Button from "@ui/Button";
 import React, {FC} from "react";
 import styles from "@s/components/fig/fig-test.module.css";
+import AnimOpc from "@anim/AnimOpc";
+import MainWindow from "@comp/MainWindow";
+import Button from "@ui/Button";
 import InputField from "@ui/InputField";
+import {IFIGTestWindow} from "@t/components/fig-test";
+import {cn} from "@ut/shadcn";
 
-const FIGTest: FC<IFIGTestProps> = ({handleNextQuestion, dish, changeQuestion, answer, setAnswer}) => {
+const FIGTest: FC<IFIGTestWindow> = ({
+  answer,
+  setAnswer,
+  setStatus,
+  dish,
+  handleNextQuestion,
+  questionNumber,
+  menuLength,
+}) => {
   const renderIngredients = () => (
     dish.ingredients && (
       <section className={styles.ingridientsDiv}>
@@ -28,33 +39,53 @@ const FIGTest: FC<IFIGTestProps> = ({handleNextQuestion, dish, changeQuestion, a
   };
 
   const nextQuestion = () => {
-    handleNextQuestion({
-      type: "next",
-    });
+    if (questionNumber + 1 === menuLength) {
+      handleNextQuestion({
+        type: "end",
+      });
+    } else {
+      handleNextQuestion({
+        type: "next",
+      });
+      handleNextQuestion({
+        type: "incorrect",
+      });
+    }
+  };
+
+  const changeQuestion = () => {
+    setStatus("result");
   };
 
   // eslint-disable-next-line no-undef
   console.log(dish.name);
 
   return (
-    <div className={styles.main}>
-      <div className={styles.text}>
-        {renderIngredients()}
-        {renderDescription()}
-      </div>
-      <div className={styles.fieldButton}>
-        <InputField
-          value={answer}
-          triggerInput={changeQuestion}
-          setValue={handleInputChange}
-          placeHolder='Назву вводити ось тут'
-        />
-        <div className={styles.buttons}>
-          <Button is='button' text='Відповісти' action={changeQuestion} to={false} />
-          <Button is='button' text='Пропустити' action={nextQuestion} to={false} />
+    <AnimOpc >
+      <MainWindow
+        className={cn(styles.mainWindow, "mainWindowStandard")}
+        header='Заповни пропуски'
+        subHeader='Зпираючись на опис страви чи напою введи назву у текстовому полі'>
+        <div className={styles.main}>
+          <div className={styles.text}>
+            {renderIngredients()}
+            {renderDescription()}
+          </div>
+          <div className={styles.fieldButton}>
+            <InputField
+              value={answer}
+              triggerInput={changeQuestion}
+              setValue={handleInputChange}
+              placeHolder='Назву вводити ось тут'
+            />
+            <div className={styles.buttons}>
+              <Button is='button' text='Відповісти' action={changeQuestion}/>
+              <Button is='button' text='Пропустити' action={nextQuestion} />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </MainWindow>
+    </AnimOpc>
   );
 };
 

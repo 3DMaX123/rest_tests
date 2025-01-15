@@ -3,18 +3,14 @@ import {IFIGNextQuestion} from "@t/components/fill-in-gap";
 
 export type IDisplay = "result" | "hint";
 
-export interface IFIGResult extends IFIGResultHOC, IFIGNextQuestion {
+export interface IFIGResult extends IFIGNextQuestion {
     answer: string;
-}
-
-export interface IFIGResultHOC {
+    questionNumber: number;
+    menuLength: number;
     dish: IFillInGaps["menu"][number];
 }
 
-export interface IFIGResultCrossLOC {
+export interface IFIGResultLOC {
     handleChangeDisplay: (changeTo: IDisplay) => void;
     triggerNextQuestion: () => void;
 }
-
-
-export type FIGResultStatus = "correct" | "incorrect";

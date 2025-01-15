@@ -1,25 +1,26 @@
 import {IClassName} from "@t/root";
 
-export type IButton = (IButtonLink | IButtonComeBack | IButtonButton) & IButtonBase & IClassName
+type ButtonBase = IClassName
 
-export interface IButtonBase {
-    text: string;
+interface ILinkButton extends ButtonBase {
+  is: "link";
+  text: string;
+  to: string;
+  action?: never;
 }
 
-interface IButtonLink {
-    to: string;
-    is: "link";
-    action: false;
+interface IActionButton extends ButtonBase {
+  is: "button";
+  text: string;
+  action: () => void;
+  to?: never;
 }
 
-interface IButtonButton {
-    to: false;
-    is: "button";
-    action: () => void;
+interface IComeBackButton extends ButtonBase {
+  is: "comeBack";
+  to: string;
+  text?: never;
+  action?: never;
 }
 
-interface IButtonComeBack {
-    to: string;
-    is: "comeBack";
-    action: false;
-}
+export type ButtonProps = ILinkButton | IActionButton | IComeBackButton;

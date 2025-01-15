@@ -1,36 +1,41 @@
-"use client";
 
-import {ChangeEvent, memo, useCallback, useMemo} from "react";
-import styles from "@s/ui/check-list.module.css";
-import {ICheckListProps} from "@t/ui/check-list";
 
-const CheckList = memo(({list, selectedItems, onUpdate}: ICheckListProps) => {
-  // Convert array to Set for O(1) lookup
-  const freezedSelectedItems = useMemo(() => new Set(selectedItems), [selectedItems]);
+import CheckListUi from "@r/src/ui/CheckListUi";
+import {cookies} from "next/headers";
+import {FIG_CHECK_LIST} from "@c/constants";
+import {FC} from "react";
+import {ICheckListProps} from "@r/src/types/ui/check-list";
 
-  const handleChange = useCallback((
-      e: ChangeEvent<HTMLInputElement>,
+
+const CheckList: FC<ICheckListProps> = async ({cookieName}) => {
+  const cookieStore = await cookies();
+  const cookiesFormatted = cookieStore.get(cookieName)?.value.split(",").filter(Boolean) || [];
+
+  const updateTestTypes = async (
+      items: string[],
   ) => {
-    onUpdate(e.target.id, e.target.checked ? "save" : "delete");
-  }, [onUpdate]);
+    "use server";
+    try {
+      const cookieStore = await cookies();
+
+      const expires = new Date();
+      expires.setDate(expires.getDate() + 7);
+      cookieStore.set(cookieName, items.join(","), {expires});
+    } catch (error) {
+      // eslint-disable-next-line no-undef
+      console.error(`Failed to update cookie ${cookieName}:`, error);
+    }
+  };
 
   return (
-    <ul className={styles.checkList}>
-      {list.map(([id, label]) => (
-        <li key={id}>
-          <input
-            type="checkbox"
-            id={id}
-            checked={freezedSelectedItems.has(id)}
-            onChange={handleChange}
-          />
-          <label htmlFor={id}>{label}</label>
-        </li>
-      ))}
-    </ul>
+    <CheckListUi
+      list={FIG_CHECK_LIST}
+      onUpdate={updateTestTypes}
+      cookieItems={cookiesFormatted}
+    />
   );
-});
+};
 
-CheckList.displayName = "CheckList";
+CheckList.displayName = "CheckListCookie";
 
 export default CheckList;

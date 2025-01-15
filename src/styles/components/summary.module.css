@@ -1,0 +1,28 @@
+.summery{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.correctAnswers,
+.incorrectAnswers{
+    font-size: 19px;
+    padding: 10px 25px;
+    background-color: aqua;
+    border-radius: 8px;
+}
+
+.correctAnswers{
+    background-color: var(--bg-correct-ans);
+    color: var(--tc-correct-ans)
+}
+.incorrectAnswers{
+    background-color: var(--bg-incorrect-ans);
+    color: var(--tc-incorrect-ans)
+}
+
+.questionNumber{
+    color: var(--tc-grey)
+}
