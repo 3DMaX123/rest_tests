@@ -29,13 +29,13 @@ const FillInGap: FC<IFillInGap> = ({menu}) => {
     setGameState((prev) => ({...prev, ...newState}));
   };
 
-  const resetStats = (): void => {
-    updateGameState({
-      correctAnswer: 0,
-      incorrectAnswer: 0,
-      questionNumber: 0,
-    });
-  };
+  // const resetStats = (): void => {
+  //   updateGameState({
+  //     correctAnswer: 0,
+  //     incorrectAnswer: 0,
+  //     questionNumber: 0,
+  //   });
+  // };
 
   const handleGameUpdate = (action: IFIGGameUpdateProps): void => {
     switch (action.type) {
