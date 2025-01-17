@@ -3,7 +3,7 @@ import MainWindow from "@comp/MainWindow";
 import styles from "@s/pages/main-page.module.css";
 import Button from "@ui/Button";
 import {links} from "@c/links";
-import {jsonToArray} from "@ut/JsonToArray";
+import {jsonToArray} from "@ut/arrays";
 import {randomNumber} from "@ut/generateRandom";
 
 export default function Home() {

@@ -43,10 +43,11 @@ const FIGResult: FC<IFIGResult> = ({
   };
 
   const triggerNextQuestion = () => {
+    handleNextQuestion({type: status === "correct" ? "correct" : "incorrect"});
+
     if (questionNumber + 1 === menuLength) {
       handleNextQuestion({type: "end"});
     } else {
-      handleNextQuestion({type: status === "correct" ? "correct" : "incorrect"});
       handleNextQuestion({type: "next"});
     }
   };

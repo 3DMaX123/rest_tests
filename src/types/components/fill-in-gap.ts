@@ -1,7 +1,8 @@
 import {IFillInGaps} from "@t/pages/fill-in-gap";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface IFillInGap extends IFillInGaps { }
+export interface IFillInGap extends IFillInGaps {
+    cookies: string | undefined;
+}
 
 export type FillInGapStatus = "start" | "test" | "result" | "end";
 
@@ -21,7 +22,6 @@ export type IFIGTestType = string[];
 
 export interface IFIGGameStateProps {
     status: FillInGapStatus;
-    questionNumber: number;
     answer: string;
     correctAnswer: number;
     incorrectAnswer: number;

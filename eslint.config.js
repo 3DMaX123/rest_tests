@@ -18,7 +18,9 @@ export default [
             '**/.next/**',
             '.next/**',           // Root level .next
             '**/.next/**',        // Nested .next folders
-            '*/.next/*'
+            '*/.next/*',
+            'next-env.d.ts',
+            '.env.d.ts',
         ]
     },
     js.configs.recommended,

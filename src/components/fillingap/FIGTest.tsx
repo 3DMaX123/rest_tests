@@ -39,6 +39,10 @@ const FIGTest: FC<IFIGTestWindow> = ({
   };
 
   const nextQuestion = () => {
+    handleNextQuestion({
+      type: "incorrect",
+    });
+
     if (questionNumber + 1 === menuLength) {
       handleNextQuestion({
         type: "end",
@@ -47,15 +51,13 @@ const FIGTest: FC<IFIGTestWindow> = ({
       handleNextQuestion({
         type: "next",
       });
-      handleNextQuestion({
-        type: "incorrect",
-      });
     }
   };
 
   const changeQuestion = () => {
     setStatus("result");
   };
+
 
   // eslint-disable-next-line no-undef
   console.log(dish.name);

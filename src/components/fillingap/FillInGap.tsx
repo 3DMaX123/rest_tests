@@ -1,6 +1,6 @@
 "use client";
 
-import React, {FC, JSX, useState} from "react";
+import React, {FC, JSX, useEffect, useState} from "react";
 import {IFIGGameStateProps, IFIGGameUpdateProps, IFillInGap} from "@t/components/fill-in-gap";
 import styles from "@s/components/fig/fill-in-gap.module.css";
 import FIGStart from "@comp/fillingap/FIGStart";
@@ -8,43 +8,73 @@ import FIGTest from "@comp/fillingap/FIGTest";
 import FIGResult from "@comp/fillingap/FIGResult";
 import Summary from "@comp/Summary";
 
-const FillInGap: FC<IFillInGap> = ({menu}) => {
+const FillInGap: FC<IFillInGap> = ({
+  menu,
+  cookies,
+}) => {
+  const [questionNumber, setQuestionNumber] = useState<number>(0);
   const [gameState, setGameState] = useState<IFIGGameStateProps>({
     status: "start",
-    questionNumber: 0,
     answer: "",
     correctAnswer: 0,
     incorrectAnswer: 0,
   });
   const {
     status,
-    questionNumber,
     answer,
     correctAnswer,
     incorrectAnswer,
   } = gameState;
-  const currentDish = menu[questionNumber];
 
   const updateGameState = (newState: Partial<IFIGGameStateProps>): void => {
     setGameState((prev) => ({...prev, ...newState}));
   };
 
-  // const resetStats = (): void => {
-  //   updateGameState({
-  //     correctAnswer: 0,
-  //     incorrectAnswer: 0,
-  //     questionNumber: 0,
-  //   });
-  // };
+  useEffect(() => {
+    updateGameState({
+      correctAnswer: 0,
+      incorrectAnswer: 0,
+    });
+    setQuestionNumber(0);
+  }, [cookies]);
+
+  const allOver = () => {
+    updateGameState({
+      correctAnswer: 0,
+      incorrectAnswer: 0,
+      status: "start",
+      answer: "",
+    });
+    setQuestionNumber(0);
+  };
+
+  // asking when user wants to leave
+  useEffect(() => {
+    const unloadCallback = (
+        event: {
+        preventDefault: () => void;
+        returnValue: string;
+        },
+    ) => {
+      event.preventDefault();
+      event.returnValue = "";
+      return "";
+    };
+
+    // eslint-disable-next-line no-undef
+    window.addEventListener("beforeunload", unloadCallback);
+    // eslint-disable-next-line no-undef
+    return () => window.removeEventListener("beforeunload", unloadCallback);
+  }, []);
 
   const handleGameUpdate = (action: IFIGGameUpdateProps): void => {
     switch (action.type) {
       case "next":
         updateGameState({
-          questionNumber: questionNumber + 1,
           status: "test",
           answer: "",
         });
+        setQuestionNumber((prev) => prev + 1);
         break;
       case "correct":
         updateGameState({
@@ -73,7 +103,7 @@ const FillInGap: FC<IFillInGap> = ({menu}) => {
         answer={answer}
         setAnswer={(answer) => updateGameState({answer})}
         setStatus={(status) => updateGameState({status})}
-        dish={currentDish}
+        dish={questionNumber > menu.length ? menu[0] : menu[questionNumber]}
         questionNumber={questionNumber}
         menuLength={menu.length}
       />,
@@ -81,13 +111,14 @@ const FillInGap: FC<IFillInGap> = ({menu}) => {
         questionNumber={questionNumber}
         menuLength={menu.length}
         handleNextQuestion={handleGameUpdate}
-        dish={currentDish}
+        dish={menu[questionNumber]}
         answer={answer}
       />,
       end: <Summary
         correctAns={correctAnswer}
         incorrectAns={incorrectAnswer}
         questionNumber={menu.length}
+        allOver={allOver}
       />,
     };
 

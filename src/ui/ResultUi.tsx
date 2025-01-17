@@ -12,7 +12,7 @@ const ResultUi: FC<IResultUi> = ({
 }) => {
   const getResultText = (status: ResultUiStatus): string => {
     const phrases = status === "correct" ? coolCorrectPhrases : coolIncorrectPhrases;
-    return phrases[randomNumber(0, phrases.length)];
+    return phrases[randomNumber(0, phrases.length - 1)];
   };
 
   const getResultBgColor = (status: ResultUiStatus): string => {

@@ -24,15 +24,18 @@ const getFilteredMenu = cache((cookiesFormatted: string[]) => {
 
 const page = async () => {
   const cookieName = "figTestType";
-  const cookiesFormatted = await getCookieData(cookieName);
+  const cookies = await getCookieData(cookieName);
+  const cookiesFormatted = cookies?.value.split(",").filter(Boolean) || [];
   const shuffledMenu = getFilteredMenu(cookiesFormatted);
-
 
   return (
     <div>
       <CheckList cookieName={cookieName}/>
-      <Button is='comeBack' to='' />
-      <FillInGap menu={shuffledMenu} />
+      <Button is="comeBack" to="" />
+      <FillInGap
+        menu={shuffledMenu}
+        cookies={cookies?.value}
+      />
     </div>
   );
 };
