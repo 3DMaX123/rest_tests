@@ -5,7 +5,7 @@
     margin: 25px auto;
 }
 
-.photo{
+.photo {
     margin: auto;
     max-width: 316px;
     max-height: fit-content;
@@ -42,6 +42,22 @@
         rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset; */
 }
 
-.decorations p{
+.decorations p {
     text-transform: lowercase;
+}
+
+@media screen and (max-width: 1200px) {
+    .photo {
+        max-width: 280px;
+    }
+
+    .line {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .photo {
+        max-width: 200px;
+    }
 }

@@ -1,10 +1,50 @@
-.main{
+.mainWindow {
+    width: 1000px;
+    height: 800px;
+}
+
+.main {
     position: relative;
 }
 
-.countDown{
+.countDown {
     position: absolute;
     top: 20px;
     left: 20px;
     color: var(--tc-grey);
+
+    z-index: 999;
+}
+
+.testGap {
+    gap: 50px;
+}
+
+.endGap {
+    gap: 80px;
+}
+
+@media screen and (max-width: 1160px) {
+    .mainWindow {
+        width: 900px;
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .mainWindow {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .countDown {
+        left: 60px;
+        top: 23px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .endGap {
+        gap: 50px;
+    }
 }

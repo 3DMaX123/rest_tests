@@ -3,10 +3,13 @@
 import {ChangeEvent, memo, useCallback, useState} from "react";
 import styles from "@s/ui/check-list.module.css";
 import {ICheckListUiProps} from "@t/ui/check-list-ui";
-import Button from "@ui/Button";
+import CheckListAdaptation from "@ui/CheckListAdaptation";
+import AnimOnExit from "@anim/AnimOnExit";
+import AnimOpc from "@anim/AnimOpc";
 
 const CheckListUi = memo(({list, cookieItems, onUpdate}: ICheckListUiProps) => {
-  const [localSelected, setLocalSelected] = useState(new Set(cookieItems));
+  const [localSelected, setLocalSelected] = useState<Set<string>>(new Set(cookieItems));
+  const [openAdaptation, setOpenAdaptation] = useState<boolean>(false);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const {id, checked} = e.target;
@@ -23,30 +26,46 @@ const CheckListUi = memo(({list, cookieItems, onUpdate}: ICheckListUiProps) => {
 
   const handleSave = useCallback(async () => {
     onUpdate(Array.from(localSelected));
+    setOpenAdaptation(false);
   }, [localSelected, cookieItems]);
 
   return (
-    <div className={styles.checkList}>
-      <ul className={styles.list}>
-        {list.map(([id, label]) => (
-          <li key={id}>
-            <input
-              type="checkbox"
-              id={id}
-              checked={localSelected.has(id)}
-              onChange={handleChange}
+    <div >
+      <div className={styles.checkListAdaptation}>
+        <AnimOnExit>
+          {openAdaptation &&
+          <CheckListAdaptation
+            localSelected={localSelected}
+            handleChange={handleChange}
+            handleSave={handleSave}
+            list={list}
+          />
+          }
+        </AnimOnExit>
+        <AnimOnExit>
+          <AnimOpc>
+            {!openAdaptation &&
+            <img
+              className={styles.menuTablet}
+              onClick={
+                () =>
+                  setOpenAdaptation(true)
+              }
+              src="/menu.svg"
+              alt="Menu"
             />
-            <label htmlFor={id}>{label}</label>
-          </li>
-        ))}
-      </ul>
-
-      <Button
-        text="Зберегти"
-        is="button"
-        action={handleSave}
-        className={styles.button}
-      />
+            }
+          </AnimOpc>
+        </AnimOnExit>
+      </div>
+      <div className={styles.checkListRegular}>
+        <CheckListAdaptation
+          localSelected={localSelected}
+          handleChange={handleChange}
+          handleSave={handleSave}
+          list={list}
+        />
+      </div>
     </div>
   );
 });

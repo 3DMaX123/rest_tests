@@ -1,5 +1,3 @@
 import {IChildren} from "@t/root";
 
-export interface IAnimOnExit extends IChildren {
-    condition: boolean;
-}
+export interface IAnimOnExit extends IChildren { }

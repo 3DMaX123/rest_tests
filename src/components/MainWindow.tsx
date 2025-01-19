@@ -10,8 +10,14 @@ const MainWindow = ({
   className,
 }: IMainWindow) => {
   return (
-    <div className={cn(styles.mainWindow, className)}>
-      <div className={styles.header}>
+    <div className={cn(
+        styles.mainWindow,
+        className,
+    )}>
+      <div className={cn(
+          styles.header,
+          "flex justify-center items-center flex-col",
+      )}>
         <p className={styles.headerText}>{header}</p>
         <p className={styles.subheader}>{subHeader}</p>
       </div>

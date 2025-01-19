@@ -1,26 +1,12 @@
-import AnimOpc from "@anim/AnimOpc";
 import React, {FC, JSX} from "react";
-import MainWindow from "@comp/MainWindow";
 import styles from "@s/components/fig/fig-result.module.css";
 import {IFIGResult} from "@t/components/fig-result";
 import DishDetailsWindow from "@comp/fillingap/DishDetailsWindow";
 import FIGResultUi from "@comp/fillingap/FIGResultUI";
-import {cn} from "@ut/shadcn";
 import {normalizeAndCompare} from "@ut/compareAlgorythms";
 import {ResultUiStatus} from "@t/ui/result-ui";
 
 type IDisplay = "result" | "hint";
-
-const Text = {
-  result: {
-    header: "І що ж там?",
-    subHeader: "Тут буде результат відповіді, також можеш подивитись розгорнуту відповідь",
-  },
-  hint: {
-    header: "А це у нас",
-    subHeader: "",
-  },
-} as const;
 
 
 const FIGResult: FC<IFIGResult> = ({
@@ -36,10 +22,6 @@ const FIGResult: FC<IFIGResult> = ({
 
   const handleDisplayChange = (changeTo: IDisplay) => {
     setDisplay(changeTo);
-  };
-
-  const getClassName = () => {
-    return display === "result" ? styles.mainWindowResult : styles.mainWindowHint;
   };
 
   const triggerNextQuestion = () => {
@@ -73,17 +55,19 @@ const FIGResult: FC<IFIGResult> = ({
     return states[display] || null;
   };
 
+  const getClassNames = () => {
+    switch (display) {
+      case "result":
+        return styles.result;
+      case "hint":
+        return styles.hint;
+    }
+  };
+
 
   return (
-    <div>
-      <AnimOpc>
-        <MainWindow
-          className={cn(getClassName(), "mainWindowStandard")}
-          header={Text[display].header}
-          subHeader={Text[display].subHeader}>
-          {renderWindowContent()}
-        </MainWindow>
-      </AnimOpc>
+    <div className={getClassNames()}>
+      {renderWindowContent()}
     </div>
   );
 };
