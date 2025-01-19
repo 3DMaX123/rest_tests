@@ -15,4 +15,15 @@
 
 .rightAnswer {
     color: var(--tc-grey);
+    text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+    .correctIncorrect {
+        max-width: 90%;
+    }
+
+    .rightAnswer {
+        max-width: 90%;
+    }
 }

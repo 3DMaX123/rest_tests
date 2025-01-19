@@ -30,7 +30,7 @@ const CheckListUi = memo(({list, cookieItems, onUpdate}: ICheckListUiProps) => {
   }, [localSelected, cookieItems]);
 
   return (
-    <div>
+    <div >
       <div className={styles.checkListAdaptation}>
         <AnimOnExit>
           {openAdaptation &&

@@ -3,3 +3,9 @@
     width: 90%;
     margin-top: 40px;
 }
+
+@media screen and (max-width: 960px) {
+    .hint {
+        margin-top: 20px;
+    }
+}

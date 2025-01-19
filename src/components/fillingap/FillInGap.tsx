@@ -133,6 +133,8 @@ const FillInGap: FC<IFillInGap> = ({
     switch (status) {
       case "test":
         return styles.testGap;
+      case "end":
+        return styles.endGap;
       default:
         return;
     }
@@ -147,6 +149,7 @@ const FillInGap: FC<IFillInGap> = ({
         <MainWindow
           className={cn(
               getClassMainWindow(),
+              styles.fillInGap,
           )}
           header={mainTexts.fig[status].header}
           subHeader={mainTexts.fig[status].subHeader}
