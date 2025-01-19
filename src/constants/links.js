@@ -5,6 +5,7 @@ export const links = {
     "LSpeedTest": "/quick-thought",
     "LDishByGuess": "/dish-by-guess",
     "LFillGap": "/fill-in-gaps",
+    "LDirectory": "/directory",
 };
 
 export const LCorrectAns = {

@@ -7,6 +7,10 @@ import FIGStart from "@comp/fillingap/FIGStart";
 import FIGTest from "@comp/fillingap/FIGTest";
 import FIGResult from "@comp/fillingap/FIGResult";
 import Summary from "@comp/Summary";
+import AnimOpc from "@r/src/animations/AnimOpc";
+import MainWindow from "../MainWindow";
+import {mainTexts} from "@r/src/constants/constants";
+import {cn} from "@ut/shadcn";
 
 const FillInGap: FC<IFillInGap> = ({
   menu,
@@ -125,12 +129,31 @@ const FillInGap: FC<IFillInGap> = ({
     return states[status as keyof typeof states] || null;
   };
 
+  const getClassMainWindow = () => {
+    switch (status) {
+      case "test":
+        return styles.testGap;
+      default:
+        return;
+    }
+  };
+
   return (
     <div className={styles.main}>
       {(status === "test" || status === "result") &&
         <p className={styles.countDown}>{questionNumber + 1}/{menu.length}</p>
       }
-      {renderGameState()}
+      <AnimOpc className={styles.mainWindow}>
+        <MainWindow
+          className={cn(
+              getClassMainWindow(),
+          )}
+          header={mainTexts.fig[status].header}
+          subHeader={mainTexts.fig[status].subHeader}
+        >
+          {renderGameState()}
+        </MainWindow>
+      </AnimOpc>
     </div>
   );
 };

@@ -6,6 +6,7 @@
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.1) 0 2px 4px,
     rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  background-color: white;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;

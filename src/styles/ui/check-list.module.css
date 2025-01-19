@@ -1,4 +1,4 @@
-.checkList{
+.checkList {
     display: flex;
     position: absolute;
     align-items: center;
@@ -14,27 +14,62 @@
 .list {
     border: 2px solid black;
     border-radius: 10px;
+
+
     padding: 10px 30px;
-    box-shadow: var(--sd-realistic-shadow);
-    text-transform: capitalize;
     max-height: 250px;
+
+    background-color: white;
+    box-shadow: var(--sd-realistic-shadow);
+
+    text-transform: capitalize;
     overflow: auto;
 }
 
-.checkList li{
+.checkList li {
     margin-bottom: 10px;
 }
 
 
-.checkList li:last-of-type{
+.checkList li:last-of-type {
     margin-bottom: 0px;
 }
 
-.checkList li input{
+.checkList li input {
     margin-right: 10px;
 }
 
-.button{
+.button {
     font-size: 16px;
     background-color: white;
+}
+
+.menuTablet {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-items: center;
+
+    width: 24px;
+
+    right: 20px;
+    top: 20px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1700px) {
+    .menuTablet {
+        display: block;
+    }
+
+    .checkListRegular {
+        display: none;
+    }
+
+    .checkListAdaptation {
+        display: block;
+    }
 }

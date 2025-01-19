@@ -61,16 +61,9 @@ const DishDetailsWindow: FC<IDishDetailsWindow> = ({
   };
 
   return (
-    <>
+    <div className={styles.dishDetails}>
       <div className={styles.resultExplainWindow}>
-        <div className={styles.main}>
-          <div className={styles.mainIfo}>
-            {renderElements()}
-          </div>
-        </div>
-        <div className={styles.blurUnder}></div>
-        <div>
-        </div>
+        {renderElements()}
       </div>
       <div className={styles.buttons}>
         <Button
@@ -86,7 +79,7 @@ const DishDetailsWindow: FC<IDishDetailsWindow> = ({
           text="Наступне питання"
         />
       </div>
-    </>
+    </div>
   );
 };
 

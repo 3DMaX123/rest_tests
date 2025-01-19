@@ -1,6 +1,14 @@
+.dishDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    flex-direction: column;
+}
+
 .resultExplainWindow {
-    width: 85%;
-    height: 70%;
     overflow: auto;
     text-align: center;
     border: 2px solid black;
@@ -27,5 +35,5 @@
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin-top: 20px;
+    margin-top: 40px;
 }

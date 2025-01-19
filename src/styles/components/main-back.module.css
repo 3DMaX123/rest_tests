@@ -14,6 +14,15 @@
   z-index: -10000;
 }
 
+.blurBack {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(151px);
+}
+
 .circles {
   position: relative;
 
@@ -60,15 +69,6 @@
   right: 163px;
 }
 
-.blurBack {
-  position: absolute;
-  width: 80%;
-  height: 100%;
-
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(151px);
-}
-
 .firstC {
   animation-duration: 4s;
 }
@@ -105,4 +105,10 @@
   100% {
     transform: translate(0%, 0%);
   }
+}
+
+@media screen and (max-width: 1655px) {
+    .blurBack{
+      width: 100%;
+    }
 }

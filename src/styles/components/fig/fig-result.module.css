@@ -1,8 +1,5 @@
-.mainWindowResult {
-    gap: 90px;
-}
-
-.mainWindowHint {
-    gap: 20px;
-    height: 90vh;
+.hint {
+    height: 70%;
+    width: 90%;
+    margin-top: 40px;
 }

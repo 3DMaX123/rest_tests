@@ -16,7 +16,7 @@ const FIGResultUi: FC<IFIGResultUi> = ({
   };
 
   return (
-    <>
+    <div className={styles.figResultUi}>
       <ResultUi
         colors={RESULT_TEXT_COLORS}
         status={status}
@@ -35,7 +35,7 @@ const FIGResultUi: FC<IFIGResultUi> = ({
           text="Розкажи більше про цю страву"
         />
       </div>
-    </>
+    </div>
   );
 };
 
