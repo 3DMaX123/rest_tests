@@ -21,7 +21,7 @@ export default function Home() {
           {/* <Button is="link" to={links.LSpeedTest} text="Швидка думка" /> */}
           {/* <Button is="link" to={links.LDishByGuess} text="Страва по опису" /> */}
           <Button is="link" to={links.LFillGap} text="Заповнити пропуски" />
-          <Button is="link" to={links.LDirectory} text="Довідник" />
+          <Button is="link" to={links.LBestiary} text="Довідник" />
           {/* <Button is="link" to={array[randomArray]} text="Здивуй мене" /> */}
         </div>
       </MainWindow>

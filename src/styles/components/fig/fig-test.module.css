@@ -4,6 +4,11 @@
   height: var(--windows-height-desktop);
 }
 
+.inputField {
+  width: 240px;
+  height: 35px;
+}
+
 .main {
   display: flex;
   align-items: center;

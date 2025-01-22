@@ -47,6 +47,7 @@ const FIGResult: FC<IFIGResult> = ({
       hint:
                 <DishDetailsWindow
                   dish={dish}
+                  variant="hint"
                   triggerNextQuestion={triggerNextQuestion}
                   handleChangeDisplay={handleDisplayChange}
                 />,

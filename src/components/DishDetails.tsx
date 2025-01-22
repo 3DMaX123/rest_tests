@@ -15,7 +15,7 @@ const DishDetails = {
   Photo: ({photo, type}: DishPhotoProps): JSX.Element => (
     <img
       className={styles.photo}
-      src={`dishPhoto/${type}/${photo}`}
+      src={`/dishPhoto/${type}/${photo}`}
       alt={photo}
     />
   ),

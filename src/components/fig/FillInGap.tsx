@@ -9,7 +9,7 @@ import FIGResult from "@r/src/components/fig/FIGResult";
 import Summary from "@comp/Summary";
 import AnimOpc from "@anim/AnimOpc";
 import MainWindow from "@comp/MainWindow";
-import {mainTexts} from "@c/constants";
+import {HEADERS} from "@c/constants";
 import {cn} from "@ut/shadcn";
 
 const FillInGap: FC<IFillInGap> = ({
@@ -151,8 +151,8 @@ const FillInGap: FC<IFillInGap> = ({
               getClassMainWindow(),
               styles.fillInGap,
           )}
-          header={mainTexts.fig[status].header}
-          subHeader={mainTexts.fig[status].subHeader}
+          header={HEADERS.fig[status].header}
+          subHeader={HEADERS.fig[status].subHeader}
         >
           {renderGameState()}
         </MainWindow>

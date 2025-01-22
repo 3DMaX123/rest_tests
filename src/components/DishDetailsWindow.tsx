@@ -1,16 +1,17 @@
-import {IDishDetailsWindow} from "@t/components/dish-details-window";
+import {IDishDetailsProps} from "@t/components/dish-details-window";
 import React, {FC} from "react";
 import styles from "@s/components/dish-details-window.module.css";
 import Button from "@ui/Button";
 import DishDetails from "@r/src/components/DishDetails";
 
-const DishDetailsWindow: FC<IDishDetailsWindow> = ({
+const DishDetailsWindow: FC<IDishDetailsProps> = ({
   dish,
   handleChangeDisplay,
   triggerNextQuestion,
+  variant,
 }) => {
   const handleChangeToHint = () => {
-    handleChangeDisplay("result");
+    handleChangeDisplay?.("result");
   };
 
   const renderElements = () => {
@@ -65,6 +66,7 @@ const DishDetailsWindow: FC<IDishDetailsWindow> = ({
       <div className={styles.resultExplainWindow}>
         {renderElements()}
       </div>
+      {variant === "hint" &&
       <div className={styles.buttons}>
         <Button
           className='bg-white'
@@ -79,6 +81,7 @@ const DishDetailsWindow: FC<IDishDetailsWindow> = ({
           text="Наступне питання"
         />
       </div>
+      }
     </div>
   );
 };

@@ -68,6 +68,7 @@ const FIGTest: FC<IFIGTestWindow> = ({
       </div>
       <div className={styles.fieldButton}>
         <InputField
+          className={styles.inputField}
           value={answer}
           triggerInput={changeQuestion}
           setValue={handleInputChange}
