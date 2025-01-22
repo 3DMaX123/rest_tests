@@ -1,4 +1,4 @@
-import {IFIGTestType} from "@t/components/fill-in-gap";
+import {IFIGTestType} from "@t/components/fig/fill-in-gap";
 
 export interface ICheckListUiProps extends ICheckListUiPropsLOC{
     cookieItems: IFIGTestType;

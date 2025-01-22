@@ -1,8 +1,8 @@
 import {IDishDetailsWindow} from "@t/components/dish-details-window";
 import React, {FC} from "react";
-import styles from "@s/components/fig/dish-details-window.module.css";
+import styles from "@s/components/dish-details-window.module.css";
 import Button from "@ui/Button";
-import DishDetails from "@comp/fillingap/DishDetails";
+import DishDetails from "@r/src/components/DishDetails";
 
 const DishDetailsWindow: FC<IDishDetailsWindow> = ({
   dish,

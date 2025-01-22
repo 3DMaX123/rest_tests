@@ -1,4 +1,4 @@
-import FillInGap from "@comp/fillingap/FillInGap";
+import FillInGap from "@r/src/components/fig/FillInGap";
 import Button from "@ui/Button";
 import {Metadata} from "next";
 import React, {cache} from "react";

@@ -1,8 +1,8 @@
 import React, {FC, JSX} from "react";
 import styles from "@s/components/fig/fig-result.module.css";
-import {IFIGResult} from "@t/components/fig-result";
-import DishDetailsWindow from "@comp/fillingap/DishDetailsWindow";
-import FIGResultUi from "@comp/fillingap/FIGResultUI";
+import {IFIGResult} from "@t/components/fig/fig-result";
+import DishDetailsWindow from "@r/src/components/DishDetailsWindow";
+import FIGResultUi from "@r/src/components/fig/FIGResultUI";
 import {normalizeAndCompare} from "@ut/compareAlgorythms";
 import {ResultUiStatus} from "@t/ui/result-ui";
 

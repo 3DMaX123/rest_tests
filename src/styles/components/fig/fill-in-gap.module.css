@@ -1,6 +1,6 @@
 .mainWindow {
-    width: 1000px;
-    height: 800px;
+    width: var(--windows-width-desktop);
+    height: calc(var(--windows-height-desktop) + 100px);
 }
 
 .main {

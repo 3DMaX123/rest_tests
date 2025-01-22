@@ -1,4 +1,4 @@
-import styles from "@s/components/fig/dish-details.module.css";
+import styles from "@s/components/dish-details.module.css";
 import {
   DishPhotoProps,
   DishNameProps,
