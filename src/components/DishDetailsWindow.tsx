@@ -18,17 +18,17 @@ const DishDetailsWindow: FC<IDishDetailsProps> = ({
     const sections = [
       {
         id: "photo",
-        content: dish.photo !== "" && dish.type !== "" &&
+        content: (dish.photo !== "" && dish.type !== "") &&
           <DishDetails.Photo photo={dish.photo} type={dish.type} />,
       },
       {
         id: "name",
-        content: dish.name &&
+        content: dish.name !== "" &&
           <DishDetails.Title name={dish.name} description={dish.description} />,
       },
       {
         id: "ingredients",
-        content: dish.ingredients &&
+        content: dish.ingredients !== "" &&
           <DishDetails.Ingredients ingredients={dish.ingredients} />,
       },
       {
