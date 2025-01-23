@@ -20,11 +20,11 @@ export function generateMetadata({params}: IParams): Metadata {
   };
 }
 
-export function generateStaticParams() {
-  return menu.map((dish) => ({
-    slug: encodeUrl(dish.url),
-  }));
-}
+// export function generateStaticParams() {
+//   return menu.map((dish) => ({
+//     slug: encodeUrl(dish.url),
+//   }));
+// }
 
 const page = async ({params}: IParams) => {
   const slug: string = (await params).slug;
