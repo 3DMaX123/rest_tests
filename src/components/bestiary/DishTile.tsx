@@ -6,9 +6,10 @@ import styles from "@s/components/bestiary/dish-tile.module.css";
 import Button from "@r/src/ui/Button";
 import {links} from "@c/links";
 import Link from "next/link";
+import {encodeUrl} from "@ut/encodeUrl";
 
 const DishTile = ({dish}: IDishTileProps) => {
-  const link = `${links.LBestiary}/dish/${dish.url}`;
+  const link = `${links.LBestiary}/dish/${encodeUrl(dish.url)}`;
 
   return (
     <div className={styles.dishTiles}>

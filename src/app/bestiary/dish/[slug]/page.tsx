@@ -8,35 +8,32 @@ import {menu} from "@c/menu";
 import {notFound} from "next/navigation";
 import {Metadata} from "next";
 import Button from "@ui/Button";
-
-export const metadata: Metadata = {
-  title: "Дізнайся більше про страви | Restaurant tests",
-};
-
-export async function generateStaticParams() {
-  const posts = menu;
-
-  return posts.map((post) => ({
-    slug: post.url,
-  }));
-}
-
+import {encodeUrl} from "@ut/encodeUrl";
 interface IParams {
   params: Promise<{slug: string}>
 }
 
+export function generateMetadata({params}: IParams): Metadata {
+  const dish = menu.find(async (item) => item.url === (await params).slug);
+  return {
+    title: dish ? `${dish.name} | Restaurant tests` : "Страву не знайдено",
+  };
+}
+
+export function generateStaticParams() {
+  return menu.map((dish) => ({
+    slug: encodeUrl(dish.url),
+  }));
+}
+
 const page = async ({params}: IParams) => {
   const slug: string = (await params).slug;
+  const dish = menu.find((item) => encodeUrl(item.url) === slug);
 
-  const getDish = () => {
-    const dish = menu.find((item) => item.url === slug);
+  if (!dish) {
+    notFound();
+  }
 
-    if (!dish) {
-      notFound();
-    }
-
-    return dish;
-  };
   return (
     <AnimOpc className={styles.mainWindow}>
       <MainWindow
@@ -45,7 +42,7 @@ const page = async ({params}: IParams) => {
       >
         <div className={styles.dishRestriction}>
           <DishDetailsWindow
-            dish={getDish()}
+            dish={dish}
             variant="bestiary"
           />
         </div>
