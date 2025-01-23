@@ -1,33 +1,34 @@
-import {IDishDetailsWindow} from "@t/components/dish-details-window";
+import {IDishDetailsProps} from "@t/components/dish-details-window";
 import React, {FC} from "react";
-import styles from "@s/components/fig/dish-details-window.module.css";
+import styles from "@s/components/dish-details-window.module.css";
 import Button from "@ui/Button";
-import DishDetails from "@comp/fillingap/DishDetails";
+import DishDetails from "@r/src/components/DishDetails";
 
-const DishDetailsWindow: FC<IDishDetailsWindow> = ({
+const DishDetailsWindow: FC<IDishDetailsProps> = ({
   dish,
   handleChangeDisplay,
   triggerNextQuestion,
+  variant,
 }) => {
   const handleChangeToHint = () => {
-    handleChangeDisplay("result");
+    handleChangeDisplay?.("result");
   };
 
   const renderElements = () => {
     const sections = [
       {
         id: "photo",
-        content: dish.photo !== "" && dish.type !== "" &&
+        content: (dish.photo !== "" && dish.type !== "") &&
           <DishDetails.Photo photo={dish.photo} type={dish.type} />,
       },
       {
         id: "name",
-        content: dish.name &&
+        content: dish.name !== "" &&
           <DishDetails.Title name={dish.name} description={dish.description} />,
       },
       {
         id: "ingredients",
-        content: dish.ingredients &&
+        content: dish.ingredients !== "" &&
           <DishDetails.Ingredients ingredients={dish.ingredients} />,
       },
       {
@@ -65,6 +66,7 @@ const DishDetailsWindow: FC<IDishDetailsWindow> = ({
       <div className={styles.resultExplainWindow}>
         {renderElements()}
       </div>
+      {variant === "hint" &&
       <div className={styles.buttons}>
         <Button
           className='bg-white'
@@ -79,6 +81,7 @@ const DishDetailsWindow: FC<IDishDetailsWindow> = ({
           text="Наступне питання"
         />
       </div>
+      }
     </div>
   );
 };

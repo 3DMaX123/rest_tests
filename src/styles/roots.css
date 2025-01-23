@@ -1,4 +1,6 @@
 :root {
+    --windows-width-desktop: 1000px;
+    --windows-height-desktop: 700px;
     --background: #ffffff;
     --foreground: #000000;
     --bc-mainBack-circle-one-two: #8DDFF3;

@@ -10,6 +10,7 @@ export type IMenu =
     decoration: string;
     allergen: string[];
     type: string;
+    url: string;
 }
 
 export interface IFillInGaps {

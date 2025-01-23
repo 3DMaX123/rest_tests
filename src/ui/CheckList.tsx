@@ -3,7 +3,7 @@ import {FC} from "react";
 import {cookies} from "next/headers";
 import CheckListUi from "@ui/CheckListUi";
 import {ICheckListProps} from "@t/ui/check-list";
-import {FIG_CHECK_LIST} from "@c/constants";
+import {DISH_TYPES} from "@c/constants";
 
 
 const CheckList: FC<ICheckListProps> = async ({cookieName}) => {
@@ -20,7 +20,6 @@ const CheckList: FC<ICheckListProps> = async ({cookieName}) => {
       const expires = new Date();
       expires.setDate(expires.getDate() + 7);
       cookieStore.set(cookieName, items.join(","), {expires});
-      // make reload here
     } catch (error) {
       // eslint-disable-next-line no-undef
       console.error(`Failed to update cookie ${cookieName}:`, error);
@@ -29,7 +28,7 @@ const CheckList: FC<ICheckListProps> = async ({cookieName}) => {
 
   return (
     <CheckListUi
-      list={FIG_CHECK_LIST}
+      list={DISH_TYPES}
       onUpdate={updateTestTypes}
       cookieItems={cookiesFormatted}
     />

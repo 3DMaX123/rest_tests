@@ -1,4 +1,4 @@
-import {IFigStart} from "@t/components/fig-start";
+import {IFigStart} from "@t/components/fig/fig-start";
 import Button from "@ui/Button";
 import React, {FC} from "react";
 

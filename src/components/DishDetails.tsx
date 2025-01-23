@@ -1,4 +1,4 @@
-import styles from "@s/components/fig/dish-details.module.css";
+import styles from "@s/components/dish-details.module.css";
 import {
   DishPhotoProps,
   DishNameProps,
@@ -15,7 +15,7 @@ const DishDetails = {
   Photo: ({photo, type}: DishPhotoProps): JSX.Element => (
     <img
       className={styles.photo}
-      src={`dishPhoto/${type}/${photo}`}
+      src={`/dishPhoto/${type}/${photo}`}
       alt={photo}
     />
   ),

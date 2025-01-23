@@ -1,0 +1,8 @@
+.notFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--windows-width-desktop);
+    height: var(--windows-height-desktop);
+}

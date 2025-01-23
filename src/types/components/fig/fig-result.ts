@@ -1,5 +1,5 @@
 import {IFillInGaps} from "@t/pages/fill-in-gap";
-import {IFIGNextQuestion} from "@t/components/fill-in-gap";
+import {IFIGNextQuestion} from "@t/components/fig/fill-in-gap";
 
 export type IDisplay = "result" | "hint";
 

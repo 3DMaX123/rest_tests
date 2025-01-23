@@ -2,6 +2,9 @@
   width: 693px;
   height: 720px;
 
+}
+
+.gapMainWindow {
   gap: 70px;
 }
 

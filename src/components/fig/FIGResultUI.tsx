@@ -1,7 +1,7 @@
 import Button from "@ui/Button";
 import styles from "@s/components/fig/fig-result-ui.module.css";
 import React, {FC} from "react";
-import {IFIGResultUi} from "@t/components/fig-result-ui";
+import {IFIGResultUi} from "@t/components/fig/fig-result-ui";
 import ResultUi from "@ui/ResultUi";
 import {RESULT_TEXT_COLORS} from "@c/constants";
 

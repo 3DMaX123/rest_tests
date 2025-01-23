@@ -1,15 +1,15 @@
 "use client";
 
 import React, {FC, JSX, useEffect, useState} from "react";
-import {IFIGGameStateProps, IFIGGameUpdateProps, IFillInGap} from "@t/components/fill-in-gap";
+import {IFIGGameStateProps, IFIGGameUpdateProps, IFillInGap} from "@t/components/fig/fill-in-gap";
 import styles from "@s/components/fig/fill-in-gap.module.css";
-import FIGStart from "@comp/fillingap/FIGStart";
-import FIGTest from "@comp/fillingap/FIGTest";
-import FIGResult from "@comp/fillingap/FIGResult";
+import FIGStart from "@r/src/components/fig/FIGStart";
+import FIGTest from "@r/src/components/fig/FIGTest";
+import FIGResult from "@r/src/components/fig/FIGResult";
 import Summary from "@comp/Summary";
-import AnimOpc from "@r/src/animations/AnimOpc";
-import MainWindow from "../MainWindow";
-import {mainTexts} from "@r/src/constants/constants";
+import AnimOpc from "@anim/AnimOpc";
+import MainWindow from "@comp/MainWindow";
+import {HEADERS} from "@c/constants";
 import {cn} from "@ut/shadcn";
 
 const FillInGap: FC<IFillInGap> = ({
@@ -151,8 +151,8 @@ const FillInGap: FC<IFillInGap> = ({
               getClassMainWindow(),
               styles.fillInGap,
           )}
-          header={mainTexts.fig[status].header}
-          subHeader={mainTexts.fig[status].subHeader}
+          header={HEADERS.fig[status].header}
+          subHeader={HEADERS.fig[status].subHeader}
         >
           {renderGameState()}
         </MainWindow>

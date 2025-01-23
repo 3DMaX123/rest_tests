@@ -2,7 +2,7 @@ import {
   IFIGChangeAnswer,
   IFIGNextQuestion,
   IFillInGapCrossWindow,
-} from "@t/components/fill-in-gap";
+} from "@t/components/fig/fill-in-gap";
 import {IFillInGaps} from "@t/pages/fill-in-gap";
 
 

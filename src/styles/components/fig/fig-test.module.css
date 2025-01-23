@@ -1,7 +1,12 @@
 .mainWindow {
   gap: 50px;
-  width: 1000px;
-  height: 700px;
+  width: var(--windows-width-desktop);
+  height: var(--windows-height-desktop);
+}
+
+.inputField {
+  width: 240px;
+  height: 35px;
 }
 
 .main {

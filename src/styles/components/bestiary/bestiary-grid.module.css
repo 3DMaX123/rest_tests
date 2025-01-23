@@ -1,0 +1,31 @@
+.grid {
+    display: grid;
+    position: relative;
+    justify-content: center;
+
+    grid-template-columns: repeat(auto-fill, 290px);
+    gap: 2rem;
+
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    width: 90%;
+    height: 70%;
+
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 1600px) {
+    .grid {
+        padding: 10px;
+
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .grid {
+        padding: 10px;
+        grid-template-columns: repeat(auto-fill, 270px);
+    }
+}

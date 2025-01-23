@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import styles from "@s/components/fig/fig-test.module.css";
 import Button from "@ui/Button";
 import InputField from "@ui/InputField";
-import {IFIGTestWindow} from "@t/components/fig-test";
+import {IFIGTestWindow} from "@t/components/fig/fig-test";
 
 const FIGTest: FC<IFIGTestWindow> = ({
   answer,
@@ -68,6 +68,7 @@ const FIGTest: FC<IFIGTestWindow> = ({
       </div>
       <div className={styles.fieldButton}>
         <InputField
+          className={styles.inputField}
           value={answer}
           triggerInput={changeQuestion}
           setValue={handleInputChange}

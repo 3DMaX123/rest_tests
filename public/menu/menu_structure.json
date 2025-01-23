@@ -1,7 +1,7 @@
 [
   {
     "name": "Ланч №1",
-    "photo": "Ланч №1.png",
+    "photo": "",
     "weight": "20",
     "time": "",
     "description": "До кожного ланчу іде суп(уточнити в ресторані які саме супи входять д\n ланчу)",
@@ -19,11 +19,12 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "lunch"
+    "type": "lunch",
+    "url": "lanch-no-1"
   },
   {
     "name": "Ланч №2",
-    "photo": "Ланч №2.png",
+    "photo": "",
     "weight": "20",
     "time": "",
     "description": "До кожного ланчу іде суп(уточнити в ресторані які саме супи входять д\n ланчу)",
@@ -41,11 +42,12 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "lunch"
+    "type": "lunch",
+    "url": "lanch-no-2"
   },
   {
     "name": "Ланч №3",
-    "photo": "Ланч №3.png",
+    "photo": "",
     "weight": "20",
     "time": "",
     "description": "До кожного ланчу іде суп(уточнити в ресторані які саме супи входять д\n ланчу)",
@@ -65,7 +67,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "lunch"
+    "type": "lunch",
+    "url": "lanch-no-3"
   },
   {
     "name": "Ньоки Карбонара",
@@ -87,7 +90,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "noki-karbonara"
   },
   {
     "name": "Ньокі з томатним соусом та базиліком",
@@ -110,7 +114,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "noki-z-tomatnim-sousom-ta-bazilikom"
   },
   {
     "name": "Ньокі ді Чіполла",
@@ -131,7 +136,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "noki-di-chipolla"
   },
   {
     "name": "Ньокі з креветками",
@@ -156,7 +162,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "noki-z-krevetkami"
   },
   {
     "name": "Ньокі з індичкою",
@@ -179,7 +186,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "noki-z-indichkoiu"
   },
   {
     "name": "Лазанья з телятиною",
@@ -215,7 +223,8 @@
       "лактоза",
       "петрушка"
     ],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "lazania-z-teliatinoiu"
   },
   {
     "name": "Паста з індичкою та пармезаном",
@@ -249,7 +258,8 @@
       "риба",
       "лимон"
     ],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "pasta-z-indichkoiu-ta-parmezanom"
   },
   {
     "name": "Равіолі тенері",
@@ -285,7 +295,8 @@
       "петрушка",
       "соя"
     ],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "ravioli-teneri"
   },
   {
     "name": "Паста з креветками у вершковому соусі",
@@ -315,7 +326,8 @@
       "соя",
       "імбир"
     ],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "pasta-z-krevetkami-u-vershkovomu-sousi"
   },
   {
     "name": "Паста з креветками та червоним соусом",
@@ -349,7 +361,8 @@
       "часник",
       "риба"
     ],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "pasta-z-krevetkami-ta-chervonim-sousom"
   },
   {
     "name": "Паста карбонара",
@@ -377,7 +390,8 @@
       "часник",
       "лактоза"
     ],
-    "type": "pasta"
+    "type": "pasta",
+    "url": "pasta-karbonara"
   },
   {
     "name": "Баскський чізкейк",
@@ -402,7 +416,8 @@
       "яйце",
       "злаки"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "baskskii-chizkeik"
   },
   {
     "name": "Лимонна кустарда",
@@ -432,7 +447,8 @@
       "злаки",
       "горіхи"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "limonna-kustarda"
   },
   {
     "name": "Тірамісу  малина",
@@ -444,11 +460,12 @@
     "ingByIng": [],
     "decoration": "",
     "allergen": [],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "tiramisu-malina"
   },
   {
     "name": "Тірамісу",
-    "photo": "Тірамісу.png",
+    "photo": "",
     "weight": "170",
     "time": "15",
     "description": "Традиційний італійський десерт тірамісу з сиром маскарпоне, печивом савоярді з ромом та кавою",
@@ -470,7 +487,8 @@
       "яйце",
       "злаки"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "tiramisu"
   },
   {
     "name": "Сирники",
@@ -496,7 +514,8 @@
       "яйце",
       "горіх"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "sirniki"
   },
   {
     "name": "Кантучині",
@@ -521,7 +540,8 @@
       "яйце",
       "горіх"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "kantuchini"
   },
   {
     "name": "Шоколадний фондан",
@@ -546,7 +566,8 @@
       "яйце",
       "горіх"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "shokoladnii-fondan"
   },
   {
     "name": "Джелато або сорбет",
@@ -562,7 +583,8 @@
     "allergen": [
       "лактоза"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "dzhelato-abo-sorbet"
   },
   {
     "name": "Сирники з кокосовим кремом",
@@ -585,7 +607,8 @@
     "allergen": [
       "лактоза"
     ],
-    "type": "desserts"
+    "type": "desserts",
+    "url": "sirniki-z-kokosovim-kremom"
   },
   {
     "name": "Спагеті з кукурудзою та мітболами",
@@ -604,7 +627,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "kidsMenu"
+    "type": "kidsMenu",
+    "url": "spageti-z-kukurudzoiu-ta-mitbolami"
   },
   {
     "name": "Котлетки з індички",
@@ -620,7 +644,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "kidsMenu"
+    "type": "kidsMenu",
+    "url": "kotletki-z-indichki"
   },
   {
     "name": "Бургер з котлеткою з телятини",
@@ -649,7 +674,8 @@
       "злаки",
       "лактоза"
     ],
-    "type": "kidsMenu"
+    "type": "kidsMenu",
+    "url": "burger-z-kotletkoiu-z-teliatini"
   },
   {
     "name": "Равіолі з індичкою",
@@ -681,7 +707,8 @@
       "петрушка",
       "цибуля"
     ],
-    "type": "kidsMenu"
+    "type": "kidsMenu",
+    "url": "ravioli-z-indichkoiu"
   },
   {
     "name": "Суп курячий дитячий",
@@ -709,7 +736,8 @@
       "злаки",
       "яйце"
     ],
-    "type": "kidsMenu"
+    "type": "kidsMenu",
+    "url": "sup-kuriachii-ditiachii"
   },
   {
     "name": "Бургер BBQ з телятиною",
@@ -746,7 +774,8 @@
       "гірчиця",
       "лактоза"
     ],
-    "type": "burgers"
+    "type": "burgers",
+    "url": "burger-bbq-z-teliatinoiu"
   },
   {
     "name": "Чізбургер з телятиною",
@@ -779,7 +808,8 @@
       "гірчиця",
       "лактоза"
     ],
-    "type": "burgers"
+    "type": "burgers",
+    "url": "chizburger-z-teliatinoiu"
   },
   {
     "name": "Морський окунь з овочами",
@@ -802,7 +832,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "mainDishes"
+    "type": "mainDishes",
+    "url": "morskii-okun-z-ovochami"
   },
   {
     "name": "ЛОСОСЬ З ОВОЧАМИ",
@@ -831,7 +862,8 @@
       "лактоза",
       "цитрус"
     ],
-    "type": "mainDishes"
+    "type": "mainDishes",
+    "url": "losos-z-ovochami"
   },
   {
     "name": "Полента з курячою грудкою",
@@ -855,7 +887,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "mainDishes"
+    "type": "mainDishes",
+    "url": "polenta-z-kuriachoiu-grudkoiu"
   },
   {
     "name": "Качина ніжка з хумусом",
@@ -879,7 +912,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "mainDishes"
+    "type": "mainDishes",
+    "url": "kachina-nizhka-z-khumusom"
   },
   {
     "name": "Стейк Нью-йорк",
@@ -908,7 +942,8 @@
       "часник",
       "гірчиця"
     ],
-    "type": "mainDishes"
+    "type": "mainDishes",
+    "url": "steik-niu-iork"
   },
   {
     "name": "суп томатний",
@@ -927,11 +962,12 @@
     "allergen": [
       "лактоза"
     ],
-    "type": "soups"
+    "type": "soups",
+    "url": "sup-tomatnii"
   },
   {
     "name": "Суп грибний\\суп грибний трюфельний",
-    "photo": "Суп грибний\\суп грибний трюфельний.png",
+    "photo": "",
     "weight": "300",
     "time": "15",
     "description": "",
@@ -950,7 +986,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "soups"
+    "type": "soups",
+    "url": "sup-gribniisup-gribnii-triufelnii"
   },
   {
     "name": "Суп курячий",
@@ -977,7 +1014,8 @@
       "злаки",
       "петрушка"
     ],
-    "type": "soups"
+    "type": "soups",
+    "url": "sup-kuriachii"
   },
   {
     "name": "Салат капрезе",
@@ -999,11 +1037,12 @@
       "лактоза",
       "горіхи"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-kapreze"
   },
   {
     "name": "Салат зелений з ростюіфом",
-    "photo": "Салат зелений з ростюіфом.png",
+    "photo": "Салат зелений з ростбіфом.png",
     "weight": "220",
     "time": "15",
     "description": "Свіжий салат з авокадо, міні томатами, сиром пармезан, мигдалевими пластівцями, заправлений оливково-бальзамічним соусом з ростбіфом сц-від. (телятина)",
@@ -1031,7 +1070,8 @@
       "горіхи",
       "мед"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-zelenii-z-rostiuifom"
   },
   {
     "name": "Салат авокадо кон тофу",
@@ -1069,7 +1109,8 @@
       "цитрусові",
       "боби"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-avokado-kon-tofu"
   },
   {
     "name": "Салат цезар з креветками",
@@ -1106,7 +1147,8 @@
       "лимон",
       "гірчиця"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-tsezar-z-krevetkami"
   },
   {
     "name": "Салат цезар з куркою су-від",
@@ -1141,7 +1183,8 @@
       "лимон",
       "гірчиця"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-tsezar-z-kurkoiu-su-vid"
   },
   {
     "name": "Салат з пармою",
@@ -1168,7 +1211,8 @@
       "гірчиця",
       "мед"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-z-parmoiu"
   },
   {
     "name": "Салат зелений",
@@ -1198,7 +1242,8 @@
       "горіхи",
       "мед"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-zelenii"
   },
   {
     "name": "Салат зелений з креветками",
@@ -1232,7 +1277,8 @@
       "риба",
       "часник"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-zelenii-z-krevetkami"
   },
   {
     "name": "Салат грецький",
@@ -1273,7 +1319,8 @@
       "лимон",
       "часник"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-gretskii"
   },
   {
     "name": "Олівʼє з куркою",
@@ -1298,7 +1345,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "salads"
+    "type": "salads",
+    "url": "olivie-z-kurkoiu"
   },
   {
     "name": "Олівʼє з лососем слабосоленим",
@@ -1324,7 +1372,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "salads"
+    "type": "salads",
+    "url": "olivie-z-lososem-slabosolenim"
   },
   {
     "name": "Салат крабовий",
@@ -1346,7 +1395,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-krabovii"
   },
   {
     "name": "Салат шуба з оселедцем",
@@ -1369,7 +1419,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-shuba-z-oseledtsem"
   },
   {
     "name": "Салат з морським окунем",
@@ -1401,7 +1452,8 @@
       "лактоза",
       "цитрусові"
     ],
-    "type": "salads"
+    "type": "salads",
+    "url": "salat-z-morskim-okunem"
   },
   {
     "name": "Картопля фрі з сирним соусом та цибулею",
@@ -1421,7 +1473,8 @@
       "Цибуля",
       "лактоза"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "kartoplia-fri-z-sirnim-sousom-ta-tsibuleiu"
   },
   {
     "name": "Картопля фрі",
@@ -1436,7 +1489,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "kartoplia-fri"
   },
   {
     "name": "Картопля смажена",
@@ -1451,7 +1505,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "kartoplia-smazhena"
   },
   {
     "name": "Курячі нагетси",
@@ -1474,7 +1529,8 @@
       "Яйця",
       "злаки"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "kuriachi-nagetsi"
   },
   {
     "name": "Сирні кульки",
@@ -1500,7 +1556,8 @@
       "часник",
       "соя"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "sirni-kulki"
   },
   {
     "name": "Карпачо з лосося",
@@ -1525,7 +1582,8 @@
       "Риба",
       "лактоза"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "karpacho-z-lososia"
   },
   {
     "name": "Карпачо з телятини",
@@ -1553,7 +1611,8 @@
       "молоко",
       "кунжут"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "karpacho-z-teliatini"
   },
   {
     "name": "Брускета з ростбіфом",
@@ -1575,7 +1634,8 @@
       "мед",
       "морепродукти"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "brusketa-z-rostbifom"
   },
   {
     "name": "Брускета з лососем",
@@ -1597,7 +1657,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "brusketa-z-lososem"
   },
   {
     "name": "Камамбер фрі з полуничним кюлі",
@@ -1620,7 +1681,8 @@
       "яйця",
       "лактоза"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "kamamber-fri-z-polunichnim-kiuli"
   },
   {
     "name": "Тріо брускета",
@@ -1649,7 +1711,8 @@
       "лактоза",
       "часник"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "trio-brusketa"
   },
   {
     "name": "Асорті з гарячих закусок",
@@ -1678,7 +1741,8 @@
       "риба",
       "гірчиця"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "asorti-z-gariachikh-zakusok"
   },
   {
     "name": "М'ясний сет",
@@ -1700,7 +1764,8 @@
     "allergen": [
       "Часник"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "miasnii-set"
   },
   {
     "name": "Антипасті сет",
@@ -1728,7 +1793,8 @@
       "петрушка",
       "лактоза"
     ],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "antipasti-set"
   },
   {
     "name": "Антипасті м'ясне",
@@ -1748,6 +1814,7 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "snacks"
+    "type": "snacks",
+    "url": "antipasti-miasne"
   }
 ]

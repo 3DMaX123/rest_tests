@@ -1,0 +1,11 @@
+.mainWindow {
+    width: var(--windows-width-desktop);
+    height: calc(var(--windows-height-desktop) + 100px);
+}
+
+.dishRestriction {
+    width: 90%;
+    height: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

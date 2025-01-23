@@ -20,7 +20,8 @@
       "Лактоза",
       "злаки"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "sei-formadzhi-z-mini-motsareloiu-parmezanova-pitsa"
   },
   {
     "name": "Квадро формаджи",
@@ -41,7 +42,8 @@
       "Лактоза",
       "злаки"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "kvadro-formadzhi"
   },
   {
     "name": "Баскайола",
@@ -61,7 +63,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "baskaiola"
   },
   {
     "name": "Чічіна",
@@ -80,7 +83,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "chichina"
   },
   {
     "name": "Салямі BBQ",
@@ -100,7 +104,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "saliami-bbq"
   },
   {
     "name": "Квадро формаджи з пепероні та пармезаном (пармезанова піца)",
@@ -122,7 +127,8 @@
       "Лактоза",
       "злаки"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "kvadro-formadzhi-z-peperoni-ta-parmezanom-parmezanova-pitsa"
   },
   {
     "name": "Тенереца",
@@ -145,7 +151,8 @@
       "злаки",
       "мед"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "teneretsa"
   },
   {
     "name": "Кото бене",
@@ -171,7 +178,8 @@
       "петрушка",
       "горіх"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "koto-bene"
   },
   {
     "name": "Сільвія",
@@ -195,7 +203,8 @@
       "злаки",
       "петрушка"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "silviia"
   },
   {
     "name": "Вегана кон тофу",
@@ -229,7 +238,8 @@
       "соя",
       "цибуля"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "vegana-kon-tofu"
   },
   {
     "name": "Піца фірмова IL MOLINO",
@@ -253,7 +263,8 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "pitsa-firmova-il-molino"
   },
   {
     "name": "Піца іль мачельяно",
@@ -275,7 +286,8 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "pitsa-il-macheliano"
   },
   {
     "name": "Поло кон формаджи",
@@ -306,7 +318,8 @@
       "лактоза",
       "часник"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "polo-kon-formadzhi"
   },
   {
     "name": "Маргарита",
@@ -326,7 +339,8 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "margarita"
   },
   {
     "name": "Баварія",
@@ -350,7 +364,8 @@
       "гриби",
       "гірчиця"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "bavariia"
   },
   {
     "name": "Капричиоза",
@@ -374,11 +389,12 @@
       "лактоза",
       "гриби"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "kaprichioza"
   },
   {
     "name": "Тоскана",
-    "photo": "Тоскана.png",
+    "photo": "",
     "weight": "410",
     "time": "13",
     "description": "",
@@ -404,7 +420,8 @@
       "часник",
       "петрушка"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "toskana"
   },
   {
     "name": "Американа",
@@ -427,7 +444,8 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "amerikana"
   },
   {
     "name": "Джульяно",
@@ -450,7 +468,8 @@
       "гриби",
       "петрушка"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "dzhuliano"
   },
   {
     "name": "Неополітана",
@@ -473,7 +492,8 @@
       "лактоза",
       "гриби"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "neopolitana"
   },
   {
     "name": "Пепероні меладжане",
@@ -496,7 +516,8 @@
       "лактоза",
       "часник"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "peperoni-meladzhane"
   },
   {
     "name": "Селмон",
@@ -524,7 +545,8 @@
       "риба",
       "петрушка"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "selmon"
   },
   {
     "name": "Пепероні",
@@ -546,7 +568,8 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "peperoni"
   },
   {
     "name": "Мілано",
@@ -566,11 +589,12 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "milano"
   },
   {
-    "name": "Дует 1 (Баварія/Кото бене)",
-    "photo": "Дует 1 (Баварія/Кото бене).png",
+    "name": "Дует 1 (Баварія, Кото бене)",
+    "photo": "Дует 1 (Баварія, Кото бене).png",
     "weight": "540",
     "time": "13",
     "description": "",
@@ -588,11 +612,12 @@
       "петрушка",
       "гірчиця"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "duet-1-bavariiakoto-bene"
   },
   {
-    "name": "Дует 2 (Папероні/Квадро формаджи)",
-    "photo": "Дует 2 (Папероні/Квадро формаджи).png",
+    "name": "Дует 2 (Папероні, Квадро формаджи)",
+    "photo": "Дует 2 (Папероні, Квадро формаджи).png",
     "weight": "395",
     "time": "13",
     "description": "",
@@ -607,11 +632,12 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "duet-2-paperonikvadro-formadzhi"
   },
   {
-    "name": "Дует 3 (Неополітана/тенереца)",
-    "photo": "Дует 3 (Неополітана/тенереца).png",
+    "name": "Дует 3 (Неополітана, тенереца)",
+    "photo": "Дует 3 (Неополітана, тенереца).png",
     "weight": "445",
     "time": "13",
     "description": "",
@@ -628,11 +654,12 @@
       "мед",
       "гриби"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "duet-3-neopolitanateneretsa"
   },
   {
-    "name": "Дует 4 (Поло кон формаджі/неополітана)",
-    "photo": "Дует 4 (Поло кон формаджі/неополітана).png",
+    "name": "Дует 4 (Поло кон формаджі, неополітана)",
+    "photo": "Дует 4 (Поло кон формаджі, неополітана).png",
     "weight": "450",
     "time": "13",
     "description": "",
@@ -649,7 +676,8 @@
       "часник",
       "гриби"
     ],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "duet-4-polo-kon-formadzhineopolitana"
   },
   {
     "name": "Піца 4 мяса",
@@ -670,7 +698,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "pitsa-4-miasa"
   },
   {
     "name": "Піца з морепродуктами",
@@ -689,7 +718,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "pitsa-z-moreproduktami"
   },
   {
     "name": "Квадро Формаджи з вяленими томатами та трюфельним медом",
@@ -708,7 +738,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "kvadro-formadzhi-z-vialenimi-tomatami-ta-triufelnim-medom"
   },
   {
     "name": "Квадро формаджи з пармою та малиновим кюлі",
@@ -728,11 +759,12 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "kvadro-formadzhi-z-parmoiu-ta-malinovim-kiuli"
   },
   {
     "name": "Піца з грибами",
-    "photo": "Піца з грибами.png",
+    "photo": "",
     "weight": "600",
     "time": "13",
     "description": "",
@@ -748,11 +780,12 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "pitsa-z-gribami"
   },
   {
     "name": "Піца Кон Формаджі з мітболами",
-    "photo": "Піца Кон Формаджі з мітболами.png",
+    "photo": "",
     "weight": "540",
     "time": "13",
     "description": "",
@@ -769,7 +802,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "pitsa-kon-formadzhi-z-mitbolami"
   },
   {
     "name": "Сатте Карне з маринованими огірками(піца 7 мяс)",
@@ -792,7 +826,8 @@
     ],
     "decoration": "",
     "allergen": [],
-    "type": "pizza"
+    "type": "pizza",
+    "url": "satte-karne-z-marinovanimi-ogirkamipitsa-7-mias"
   },
   {
     "name": "Фокача",
@@ -816,7 +851,8 @@
       "Злаки",
       "часник"
     ],
-    "type": "italianBread"
+    "type": "italianBread",
+    "url": "fokacha"
   },
   {
     "name": "Фокача кон песто",
@@ -839,7 +875,8 @@
       "лактоза",
       "горіхи"
     ],
-    "type": "italianBread"
+    "type": "italianBread",
+    "url": "fokacha-kon-pesto"
   },
   {
     "name": "Фокача кон пармеджано",
@@ -861,7 +898,8 @@
       "Злаки",
       "лактоза"
     ],
-    "type": "italianBread"
+    "type": "italianBread",
+    "url": "fokacha-kon-parmedzhano"
   },
   {
     "name": "Чіабата",
@@ -879,6 +917,7 @@
     "allergen": [
       "Злаки"
     ],
-    "type": "italianBread"
+    "type": "italianBread",
+    "url": "chiabata"
   }
 ]

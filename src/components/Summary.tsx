@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import styles from "@s/components/summary.module.css";
 import {ISummary} from "@t/components/summary";
-import Button from "../ui/Button";
+import Button from "@ui/Button";
 
 const Summary: FC<ISummary> = ({
   correctAns,

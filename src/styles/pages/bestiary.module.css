@@ -1,0 +1,40 @@
+.mainWindow {
+    width: 1500px;
+    height: 800px;
+}
+
+@media screen and (max-width: 1600px) {
+    .mainWindow {
+        width: 1300px;
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .mainWindow {
+        width: 1100px;
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .mainWindow {
+        width: 900px;
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .mainWindow {
+        width: 700px;
+        height: 800px;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    .mainWindow {
+        width: 100vw;
+        height: 100vh;
+    }
+}
