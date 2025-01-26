@@ -8,6 +8,7 @@ export interface DishPhotoProps {
 export interface DishNameProps {
     name: string;
     description?: string;
+    alcohol: boolean | undefined;
 }
 
 export interface DishIngredientsProps {

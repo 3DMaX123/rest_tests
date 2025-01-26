@@ -24,7 +24,10 @@ const DishDetailsWindow: FC<IDishDetailsProps> = ({
       {
         id: "name",
         content: dish.name !== "" &&
-          <DishDetails.Title name={dish.name} description={dish.description} />,
+          <DishDetails.Title
+            name={dish.name}
+            description={dish.description}
+            alcohol={dish.alcohol} />,
       },
       {
         id: "ingredients",
