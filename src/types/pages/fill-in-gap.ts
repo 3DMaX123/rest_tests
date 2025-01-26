@@ -11,6 +11,9 @@ export type IMenu =
     allergen: string[];
     type: string;
     url: string;
+    alcohol?: boolean;
+    drinks?: boolean;
+    subType?: string;
 }
 
 export interface IFillInGaps {

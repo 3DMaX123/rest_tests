@@ -1,4 +1,6 @@
 export const DISH_TYPES = [
+
+  // dishes
   ["burgers", "Бургери"],
   ["desserts", "Десерти"],
   ["italianBread", "Італійський хліб"],
@@ -9,6 +11,30 @@ export const DISH_TYPES = [
   ["salads", "Салати"],
   ["snacks", "Закуски"],
   ["soups", "Супи"],
+
+  // drink types
+  ["alcohol", "Алкоголь"],
+  ["lemonades", "Лимонади"],
+  ["drinks", "Напої"],
+  ["cocktails", "Коктейлі"],
+  ["coffe", "Кава"],
+  ["tea", "Чай"],
+
+
+  // subTypes
+  ['aperol', 'Апероль'],
+  ['becherovka', 'Бехеровка'],
+  ['beer', 'Пиво'],
+  ['brendi', 'Бренді'],
+  ['gin', 'Джин'],
+  ['grappa', 'Граппа'],
+  ['mulled wine', 'Глінтвейн'],
+  ['punch', 'Пунш'],
+  ['rom', 'Ром'],
+  ['tequila', 'Текіла'],
+  ['vine', 'Вино'],
+  ['vodka', 'Горілка'],
+  ['whisky', 'Віскі'],
 ]
 
 export const RESULT_TEXT_COLORS = {

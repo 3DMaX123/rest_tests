@@ -11,6 +11,19 @@
     max-height: fit-content;
 }
 
+.alcoholAlert {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-weight: 300;
+    border: 1px solid rgb(139, 0, 0);
+    font-size: 13px;
+    border-radius: 6px;
+    background-color: rgba(255, 81, 81, 0.692);
+    padding: 3px 5px;
+    color: var(--tc-incorrect-ans);
+}
+
 .recipe,
 .allergen,
 .decorations {
@@ -46,6 +59,8 @@
     text-transform: lowercase;
 }
 
+
+
 @media screen and (max-width: 1200px) {
     .photo {
         max-width: 280px;
@@ -59,5 +74,11 @@
 @media screen and (max-width: 960px) {
     .photo {
         max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .alcoholAlert {
+        position: static;
     }
 }

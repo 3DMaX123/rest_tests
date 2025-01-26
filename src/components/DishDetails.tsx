@@ -19,9 +19,16 @@ const DishDetails = {
       alt={photo}
     />
   ),
-  Title: ({name, description}: DishNameProps): JSX.Element => (
+  Title: ({name, description, alcohol}: DishNameProps): JSX.Element => (
     <>
-      <h2 className={styles.name}>{name}</h2>
+      <h2 className={styles.name}>
+        {name}
+        <br />
+        {alcohol ?
+          <code className={styles.alcoholAlert}>алкогольний напій!</code> :
+          ""
+        }
+      </h2>
       {description && <p className={styles.description}>{description}</p>}
     </>
   ),
