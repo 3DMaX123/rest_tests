@@ -15,6 +15,10 @@ const DishTile = ({dish}: IDishTileProps) => {
     <div className={styles.dishTiles}>
       <Link href={link} className={styles.name}>
         {dish.name}
+        {dish.alcohol ?
+          <code className={styles.alcoholAlert}>18+</code> :
+          ""
+        }
       </Link>
       <Link href={link} className={styles.image}>
         {dish.photo !== "" && dish.type !== "" &&

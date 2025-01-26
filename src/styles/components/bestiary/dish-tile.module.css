@@ -1,5 +1,6 @@
 .dishTiles {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
 
@@ -30,6 +31,19 @@
     object-fit: cover;
     border-radius: 10px;
 
+}
+
+.alcoholAlert {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-weight: 300;
+    border: 1px solid rgb(139, 0, 0);
+    font-size: 13px;
+    border-radius: 8px;
+    background-color: rgba(255, 81, 81, 0.692);
+    padding: 1px 7px;
+    color: var(--tc-incorrect-ans);
 }
 
 @media screen and (max-width: 1180px) {
