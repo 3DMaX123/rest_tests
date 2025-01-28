@@ -1,41 +1,47 @@
 "use client";
 
 import React, {FC, JSX, useEffect, useState} from "react";
-import {IFIGGameStateProps, IFIGGameUpdateProps, IFillInGap} from "@t/components/fig/fill-in-gap";
-import styles from "@s/components/fig/fill-in-gap.module.css";
-import Start from "@r/src/components/Start";
-import FIGTest from "@r/src/components/fig/FIGTest";
-import FIGResult from "@r/src/components/fig/FIGResult";
-import Summary from "@comp/Summary";
+import {cn} from "@ut/shadcn";
 import AnimOpc from "@anim/AnimOpc";
 import MainWindow from "@comp/MainWindow";
 import {HEADERS} from "@c/constants";
-import {cn} from "@ut/shadcn";
+import {
+  IGIGameUpdateProps,
+  IGIHandleAnswersProps,
+  IGIProps,
+  IGIStateProps,
+} from "@t/components/guess-ing/guess-ing";
+import styles from "@s/pages/guess-ing.module.css";
+import Summary from "../Summary";
+import Start from "../Start";
+import GIResult from "./GIResult";
+import GITest from "./GITest";
 
-const FillInGap: FC<IFillInGap> = ({
+const GuessIng: FC<IGIProps> = ({
   menu,
   cookies,
 }) => {
   const [questionNumber, setQuestionNumber] = useState<number>(0);
-  const [gameState, setGameState] = useState<IFIGGameStateProps>({
+  const [gameState, setGameState] = useState<IGIStateProps>({
     status: "start",
-    answer: "",
+    answer: [],
     correctAnswer: 0,
     incorrectAnswer: 0,
   });
   const {
     status,
-    answer,
     correctAnswer,
     incorrectAnswer,
+    answer,
   } = gameState;
 
-  const updateGameState = (newState: Partial<IFIGGameStateProps>): void => {
+  const updateGameState = (newState: Partial<IGIStateProps>): void => {
     setGameState((prev) => ({...prev, ...newState}));
   };
 
   useEffect(() => {
     updateGameState({
+      answer: [],
       correctAnswer: 0,
       incorrectAnswer: 0,
     });
@@ -44,10 +50,10 @@ const FillInGap: FC<IFillInGap> = ({
 
   const allOver = () => {
     updateGameState({
+      status: "start",
+      answer: [],
       correctAnswer: 0,
       incorrectAnswer: 0,
-      status: "start",
-      answer: "",
     });
     setQuestionNumber(0);
   };
@@ -71,24 +77,13 @@ const FillInGap: FC<IFillInGap> = ({
     return () => window.removeEventListener("beforeunload", unloadCallback);
   }, []);
 
-  const handleGameUpdate = (action: IFIGGameUpdateProps): void => {
+  const handleGameUpdate = (action: IGIGameUpdateProps): void => {
     switch (action.type) {
       case "next":
         updateGameState({
           status: "test",
-          answer: "",
         });
         setQuestionNumber((prev) => prev + 1);
-        break;
-      case "correct":
-        updateGameState({
-          correctAnswer: correctAnswer + 1,
-        });
-        break;
-      case "incorrect":
-        updateGameState({
-          incorrectAnswer: incorrectAnswer + 1,
-        });
         break;
       case "end":
         updateGameState({
@@ -97,24 +92,41 @@ const FillInGap: FC<IFillInGap> = ({
     }
   };
 
+  const handleSummaries = (action: IGIHandleAnswersProps) => {
+    switch (action.type) {
+      case "correct":
+        updateGameState({
+          correctAnswer: correctAnswer + action.amount,
+        });
+        break;
+      case "incorrect":
+        updateGameState({
+          correctAnswer: correctAnswer + action.amount,
+        });
+        break;
+      default:
+        break;
+    }
+  };
+
   const renderGameState = (): JSX.Element | null => {
     const states = {
       start: <Start
         setStatus={(status) => updateGameState({status})}
       />,
-      test: <FIGTest
+      test: <GITest
         handleNextQuestion={handleGameUpdate}
-        answer={answer}
-        setAnswer={(answer) => updateGameState({answer})}
         setStatus={(status) => updateGameState({status})}
+        setAnswer={(answer) => updateGameState({answer})}
         dish={questionNumber > menu.length ? menu[0] : menu[questionNumber]}
         questionNumber={questionNumber}
         menuLength={menu.length}
       />,
-      result: <FIGResult
+      result: <GIResult
+        handleNextQuestion={handleGameUpdate}
+        handleSummaries={handleSummaries}
         questionNumber={questionNumber}
         menuLength={menu.length}
-        handleNextQuestion={handleGameUpdate}
         dish={menu[questionNumber]}
         answer={answer}
       />,
@@ -149,10 +161,10 @@ const FillInGap: FC<IFillInGap> = ({
         <MainWindow
           className={cn(
               getClassMainWindow(),
-              styles.fillInGap,
+              styles.guessIng,
           )}
-          header={HEADERS.fig[status].header}
-          subHeader={HEADERS.fig[status].subHeader}
+          header={HEADERS.gi[status].header}
+          subHeader={HEADERS.gi[status].subHeader}
         >
           {renderGameState()}
         </MainWindow>
@@ -161,6 +173,4 @@ const FillInGap: FC<IFillInGap> = ({
   );
 };
 
-FillInGap.displayName = "FillInGap";
-
-export default FillInGap;
+export default GuessIng;

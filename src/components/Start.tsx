@@ -1,8 +1,8 @@
-import {IFigStart} from "@t/components/fig/fig-start";
+import {StartProps} from "@t/components/start";
 import Button from "@ui/Button";
 import React, {FC} from "react";
 
-const FIGStart: FC<IFigStart> = ({setStatus}) => {
+const Start: FC<StartProps> = ({setStatus}) => {
   const handleTestStart = (): void => {
     setStatus("test");
   };
@@ -17,6 +17,6 @@ const FIGStart: FC<IFigStart> = ({setStatus}) => {
   );
 };
 
-FIGStart.displayName = "FIGStart";
+Start.displayName = "Start";
 
-export default FIGStart;
+export default Start;

@@ -1,4 +1,4 @@
-import {IFillInGaps, IMenu} from "@t/pages/fill-in-gap";
+import {IMenuProp, IMenu} from "@t/root";
 
 export interface DishPhotoProps {
     photo: string;
@@ -28,7 +28,7 @@ export interface DishDecorationProps {
 }
 
 export interface DishAdditionalProps {
-    dish: IFillInGaps["menu"][number];
+    dish: IMenuProp["menu"][number];
 }
 
 type DishPropertyKey = keyof Pick<IMenu, "time" | "weight">;

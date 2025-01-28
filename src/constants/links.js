@@ -6,6 +6,7 @@ export const links = {
     "LDishByGuess": "/dish-by-guess",
     "LFillGap": "/fill-in-gaps",
     "LBestiary": "/bestiary",
+    "LGuessIng": "/guess-ingredients",
 };
 
 export const LCorrectAns = {

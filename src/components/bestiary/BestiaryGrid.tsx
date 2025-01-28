@@ -2,7 +2,7 @@
 
 import React, {useCallback} from "react";
 import {menu} from "@c/menu";
-import {IMenu} from "@t/pages/fill-in-gap";
+import {IMenu} from "@t/root";
 import {useSearchParams} from "next/navigation";
 import DishTile from "@comp/bestiary/DishTile";
 import styles from "@s/components/bestiary/bestiary-grid.module.css";

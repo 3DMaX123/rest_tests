@@ -1,0 +1,79 @@
+.main {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+
+    width: 100%;
+
+    flex-direction: column;
+}
+
+.texts {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.texts p {
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.rightAns {
+    background-color: var(--bg-correct-ans);
+    color: var(--tc-correct-ans);
+}
+
+.wrongAns {
+    background-color: var(--bg-incorrect-ans);
+    color: var(--tc-incorrect-ans);
+}
+
+.recipeScroll {
+    width: 100%;
+    height: 200px;
+
+    overflow: auto;
+}
+
+.recipe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+
+    padding: 10px 10px;
+}
+
+.recipeOneByOne {
+    position: relative;
+
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid black;
+
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.recipeOneByOneCorrect {
+    background-color: var(--bg-correct-ans);
+    color: var(--tc-correct-ans);
+    cursor: default !important;
+}
+
+.recipeOneByOneIncorrect {
+    background-color: var(--bg-incorrect-ans);
+    color: var(--tc-incorrect-ans);
+    cursor: default !important;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}

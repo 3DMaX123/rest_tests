@@ -1,13 +1,7 @@
-import {IFillInGaps} from "@t/pages/fill-in-gap";
+import {ICommonTestStatuses, IMenuProp} from "@t/root";
 
-export interface IFillInGap extends IFillInGaps {
+export interface IFillInGap extends IMenuProp {
     cookies: string | undefined;
-}
-
-export type FillInGapStatus = "start" | "test" | "result" | "end";
-
-export interface IFillInGapCrossWindow {
-    setStatus: (status: FillInGapStatus) => void;
 }
 
 export interface IFIGChangeAnswer {
@@ -21,7 +15,7 @@ export interface IFIGNextQuestion {
 export type IFIGTestType = string[];
 
 export interface IFIGGameStateProps {
-    status: FillInGapStatus;
+    status: ICommonTestStatuses;
     answer: string;
     correctAnswer: number;
     incorrectAnswer: number;
