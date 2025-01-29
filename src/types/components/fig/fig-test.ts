@@ -1,17 +1,17 @@
 import {
   IFIGChangeAnswer,
   IFIGNextQuestion,
-  IFillInGapCrossWindow,
 } from "@t/components/fig/fill-in-gap";
-import {IFillInGaps} from "@t/pages/fill-in-gap";
+import {IChangeTestStatuses, IMenuProp} from "@t/root";
 
 
 export interface IFIGTestWindow extends
-IFillInGapCrossWindow,
-IFIGChangeAnswer,
-IFIGNextQuestion{
+  IChangeTestStatuses,
+  IFIGChangeAnswer,
+  IFIGNextQuestion
+{
   answer: string;
-  dish: IFillInGaps["menu"][number];
+  dish: IMenuProp["menu"][number];
   questionNumber: number;
   menuLength: number;
 

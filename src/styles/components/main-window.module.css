@@ -33,6 +33,10 @@
   .subheader {
     max-width: 80%;
   }
+
+  .headerText {
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 600px) {

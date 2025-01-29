@@ -5,8 +5,7 @@ import DishDetailsWindow from "@r/src/components/DishDetailsWindow";
 import FIGResultUi from "@r/src/components/fig/FIGResultUI";
 import {normalizeAndCompare} from "@ut/compareAlgorythms";
 import {ResultUiStatus} from "@t/ui/result-ui";
-
-type IDisplay = "result" | "hint";
+import {DDChangeDisplayProps} from "@t/components/dish-details-window";
 
 
 const FIGResult: FC<IFIGResult> = ({
@@ -16,11 +15,11 @@ const FIGResult: FC<IFIGResult> = ({
   questionNumber,
   menuLength,
 }) => {
-  const [display, setDisplay] = React.useState<IDisplay>("result");
+  const [display, setDisplay] = React.useState<DDChangeDisplayProps>("result");
   const isAnswerCorrect = normalizeAndCompare(dish.name, answer);
   const status: ResultUiStatus = isAnswerCorrect ? "correct" : "incorrect";
 
-  const handleDisplayChange = (changeTo: IDisplay) => {
+  const handleDisplayChange = (changeTo: DDChangeDisplayProps) => {
     setDisplay(changeTo);
   };
 

@@ -1,15 +1,16 @@
-import {IFillInGaps} from "@t/pages/fill-in-gap";
-import {IDisplay} from "@t/components/fig/fig-result";
+import {IMenuProp} from "@t/root";
+
+export type DDChangeDisplayProps = "result" | "hint";
 
 export interface IDishDetailsWindow {
-    dish: IFillInGaps["menu"][number];
+    dish: IMenuProp["menu"][number];
     variant: "hint";
-    handleChangeDisplay: (changeTo: IDisplay) => void;
+    handleChangeDisplay: (changeTo: DDChangeDisplayProps) => void;
     triggerNextQuestion: () => void;
 }
 
 export interface IDishDetailsBestiary {
-    dish: IFillInGaps["menu"][number];
+    dish: IMenuProp["menu"][number];
     variant: "bestiary";
     handleChangeDisplay?: never;
     triggerNextQuestion?: never;

@@ -2,7 +2,7 @@ import {cache} from "react";
 import {cookies} from "next/headers";
 import {menu} from "@c/menu";
 import {shuffle} from "@ut/arrays";
-import {IMenu} from "../types/pages/fill-in-gap";
+import {IMenu} from "@t/root";
 
 
 export const getCookieData = cache(async (cookieName: string) => {
@@ -20,6 +20,10 @@ export const getFilteredMenu = cache((cookiesFormatted: string[], isShuffle: boo
     newMenu = menu.filter((item: IMenu) =>
       item.subType !== undefined && cookiesFormatted.includes(item.subType),
     );
+  }
+
+  if (!newMenu.length) {
+    newMenu = menu;
   }
 
   if (isShuffle) {

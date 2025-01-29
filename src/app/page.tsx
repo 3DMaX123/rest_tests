@@ -20,6 +20,7 @@ export default function Home() {
           {/* <Button is="link" to={links.LCategories} text="Категорії" /> */}
           {/* <Button is="link" to={links.LSpeedTest} text="Швидка думка" /> */}
           {/* <Button is="link" to={links.LDishByGuess} text="Страва по опису" /> */}
+          <Button is="link" to={links.LGuessIng} text="Інгредієнти по назві" />
           <Button is="link" to={links.LFillGap} text="Заповнити пропуски" />
           <Button is="link" to={links.LBestiary} text="Довідник" />
           {/* <Button is="link" to={array[randomArray]} text="Здивуй мене" /> */}

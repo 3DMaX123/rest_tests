@@ -1,4 +1,4 @@
-import {IMenu} from "@t/pages/fill-in-gap";
+import {IMenu} from "@t/root";
 
 export interface IDishTileProps {
     dish: IMenu;

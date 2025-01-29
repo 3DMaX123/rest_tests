@@ -1,16 +1,15 @@
-import {IFillInGaps} from "@t/pages/fill-in-gap";
+import {IMenuProp} from "@t/root";
 import {IFIGNextQuestion} from "@t/components/fig/fill-in-gap";
-
-export type IDisplay = "result" | "hint";
+import {DDChangeDisplayProps} from "@t/components/dish-details-window";
 
 export interface IFIGResult extends IFIGNextQuestion {
     answer: string;
     questionNumber: number;
     menuLength: number;
-    dish: IFillInGaps["menu"][number];
+    dish: IMenuProp["menu"][number];
 }
 
 export interface IFIGResultLOC {
-    handleChangeDisplay: (changeTo: IDisplay) => void;
+    handleChangeDisplay: (changeTo: DDChangeDisplayProps) => void;
     triggerNextQuestion: () => void;
 }
