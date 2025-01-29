@@ -101,7 +101,7 @@ const GuessIng: FC<IGIProps> = ({
         break;
       case "incorrect":
         updateGameState({
-          correctAnswer: correctAnswer + action.amount,
+          incorrectAnswer: incorrectAnswer + action.amount,
         });
         break;
       default:
@@ -116,6 +116,7 @@ const GuessIng: FC<IGIProps> = ({
       />,
       test: <GITest
         handleNextQuestion={handleGameUpdate}
+        handleSummaries={handleSummaries}
         setStatus={(status) => updateGameState({status})}
         setAnswer={(answer) => updateGameState({answer})}
         dish={questionNumber > menu.length ? menu[0] : menu[questionNumber]}

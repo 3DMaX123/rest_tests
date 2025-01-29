@@ -13,6 +13,7 @@ const GITest: FC<IGITestProps> = ({
   questionNumber,
   setStatus,
   setAnswer,
+  handleSummaries,
 }) => {
   const [answers, setAnswers] = useState<Set<string>>(new Set());
   const allIngredients = useMemo(() =>
@@ -26,6 +27,10 @@ const GITest: FC<IGITestProps> = ({
   }, []);
 
   const skipQuestion = () => {
+    handleSummaries({
+      type: "incorrect",
+      amount: allIngredients.length,
+    });
     setAnswers(new Set());
 
     if (questionNumber + 1 === menuLength) {

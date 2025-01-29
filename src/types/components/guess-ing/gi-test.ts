@@ -1,10 +1,11 @@
 import {IChangeTestStatuses, IMenuProp} from "@t/root";
-import {IGIChangeAnswer, IGINextQuestion} from "./guess-ing";
+import {IGIChangeAnswer, IGIHandleSummaries, IGINextQuestion} from "./guess-ing";
 
 export interface IGITestProps extends
     IGINextQuestion,
     IChangeTestStatuses,
-    IGIChangeAnswer
+    IGIChangeAnswer,
+    IGIHandleSummaries
  {
     dish: IMenuProp["menu"][number];
     questionNumber: number;

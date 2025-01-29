@@ -24,3 +24,34 @@
 .testGap {
     gap: 60px;
 }
+
+@media screen and (max-width: 1190px) {
+    .mainWindow {
+        width: 100%;
+    }
+
+    .main {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main {
+        width: 100vw;
+    }
+
+    .mainWindow {
+        height: 100vh;
+    }
+
+    .countDown {
+        left: 60px;
+        top: 22px;
+    }
+}
+
+@media screen and (max-height: 840px) {
+    .mainWindow {
+        height: 100vh;
+    }
+}
